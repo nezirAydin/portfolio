@@ -8,6 +8,7 @@ import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import ContactMe from "./components/ContactMe";
 import Skills from "./components/Skills";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 function App() {
   const pageTransition = {
@@ -70,6 +71,7 @@ function App() {
             }
           />
         </Routes>
+        <WhatsAppButton />
       </div>
     </Router>
   );
