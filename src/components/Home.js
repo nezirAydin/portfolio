@@ -4,9 +4,9 @@ import "./Home.css";
 
 const Home = () => {
   const highlights = [
-    "Systems and AI infrastructure engineer focused on Linux, performance, and governance.",
-    "Master's-level background with hands-on work across low-level software and production systems.",
-    "Building technical solutions for expensive problems, from LLM gateways to hardware-aware platforms.",
+    "Specialized in high-performance systems, Linux engineering, and AI infrastructure.",
+    "Able to deliver end-to-end products, from kernel-adjacent work to production-ready web applications.",
+    "Master's-level engineering background with a focus on solving expensive technical problems.",
   ];
 
   return (
@@ -22,16 +22,17 @@ const Home = () => {
           animate={{ scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          Systems and AI Infrastructure Engineer
+          Software Engineer
         </motion.h1>
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 1 }}
         >
-          I build high-performance software across Linux systems, AI gateways,
-          and production-grade backend platforms. This portfolio focuses on the
-          engineering depth behind the work, not just polished interfaces.
+          I specialize in high-performance systems and AI infrastructure, with a
+          proven track record of delivering scalable full-stack solutions. My
+          work spans Linux platforms, governance-aware AI systems, backend
+          architecture, and customer-facing applications.
         </motion.p>
         <div className="home-highlights">
           {highlights.map((highlight, index) => (

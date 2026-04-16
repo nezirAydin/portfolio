@@ -12,22 +12,35 @@ const Projects = ({ isHomepage = false }) => {
       featured: true,
     },
     {
+      name: "Mehdi Group",
+      description:
+        "A corporate web platform presented as full-stack proof: branding, landing-page architecture, and production delivery for a business-facing presence. It demonstrates that the same engineer who works close to the system can also ship polished client-facing software.",
+      websiteLink: "https://mehdigroups.com",
+      type: "Full-Stack Application",
+      featured: true,
+    },
+    {
+      name: "EU4Less",
+      description:
+        "A commercial application that strengthens the end-to-end engineering story through product delivery, frontend experience, and service integration. It is positioned here as evidence of breadth alongside deeper systems and infrastructure work.",
+      type: "Full-Stack Platform",
+      featured: true,
+    },
+  ];
+
+  const projects = [
+    {
       name: "Linux Driver and Kernel Workflow Lab",
       description:
         "Deep work around Ubuntu, NVIDIA drivers, kernel modules, and platform-specific configuration on performance hardware. It demonstrates practical low-level debugging and systems integration beyond typical application engineering.",
       type: "Low-Level Systems",
-      featured: true,
     },
     {
       name: "Predictive Customer Insights Platform",
       description:
         "Built a data-driven product around customer segmentation, churn-risk modeling, and behavioral analysis. The focus is business impact: helping teams act earlier on retention and growth signals.",
       type: "Applied AI",
-      featured: true,
     },
-  ];
-
-  const projects = [
     {
       name: "DJI Drone GPS and ATTI Control Work",
       description:
@@ -66,12 +79,13 @@ const Projects = ({ isHomepage = false }) => {
     <div className={`projects ${isHomepage ? "projects-homepage" : ""}`}>
       <h2>{isHomepage ? "Featured Projects" : "My Work"}</h2>
       <p className="projects-intro">
-        Selected work that reflects low-level engineering depth, AI governance,
-        and solution design for real operational problems.
+        Selected work that shows both engineering depth in systems and AI, and
+        the ability to deliver production-ready full-stack applications for
+        real clients and business needs.
       </p>
       
       <div className="recent-works-section">
-        <h3 className="section-title">Heavy Hitters</h3>
+        <h3 className="section-title">End-to-End Delivery</h3>
         <div className="projects-grid">
           {recentWorks.map((project, index) => (
             <motion.div
@@ -104,7 +118,7 @@ const Projects = ({ isHomepage = false }) => {
       </div>
 
       <div className="other-projects-section">
-        <h3 className="section-title">Supporting Experience</h3>
+        <h3 className="section-title">Systems and AI Depth</h3>
         <div className="projects-grid">
           {projects.map((project, index) => (
             <motion.div
