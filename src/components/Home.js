@@ -2,16 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import "./Home.css";
 
-const Home = () => {
-  const highlights = [
-    "Specialized in high-performance systems, Linux engineering, and AI infrastructure.",
-    "Able to deliver end-to-end products, from kernel-adjacent work to production-ready web applications.",
-    "Master's-level engineering background with a focus on solving expensive technical problems.",
-  ];
-
+const Home = ({ content, isArabic }) => {
   return (
     <motion.div
-      className="home"
+      className={`home ${isArabic ? "home-ar" : ""}`}
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
@@ -22,20 +16,17 @@ const Home = () => {
           animate={{ scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          Software Engineer
+          {content.title}
         </motion.h1>
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 1 }}
         >
-          I specialize in high-performance systems and AI infrastructure, with a
-          proven track record of delivering scalable full-stack solutions. My
-          work spans Linux platforms, governance-aware AI systems, backend
-          architecture, and customer-facing applications.
+          {content.description}
         </motion.p>
         <div className="home-highlights">
-          {highlights.map((highlight, index) => (
+          {content.highlights.map((highlight, index) => (
             <motion.div
               className="home-highlight"
               key={highlight}

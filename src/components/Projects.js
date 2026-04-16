@@ -2,90 +2,17 @@ import React from "react";
 import { motion } from "framer-motion";
 import "./Projects.css";
 
-const Projects = ({ isHomepage = false }) => {
-  const recentWorks = [
-    {
-      name: "LLM Gateway with Governance Engine",
-      description:
-        "Designed an AI gateway focused on policy enforcement, secure model access, and operational control. This project highlights AI infrastructure thinking around governance, reliability, and enterprise readiness.",
-      type: "AI Infrastructure",
-      featured: true,
-    },
-    {
-      name: "Mehdi Group",
-      description:
-        "A corporate web platform presented as full-stack proof: branding, landing-page architecture, and production delivery for a business-facing presence. It demonstrates that the same engineer who works close to the system can also ship polished client-facing software.",
-      websiteLink: "https://mehdigroups.com",
-      type: "Full-Stack Application",
-      featured: true,
-    },
-    {
-      name: "EU4Less",
-      description:
-        "A commercial application that strengthens the end-to-end engineering story through product delivery, frontend experience, and service integration. It is positioned here as evidence of breadth alongside deeper systems and infrastructure work.",
-      type: "Full-Stack Platform",
-      featured: true,
-    },
-  ];
-
-  const projects = [
-    {
-      name: "Linux Driver and Kernel Workflow Lab",
-      description:
-        "Deep work around Ubuntu, NVIDIA drivers, kernel modules, and platform-specific configuration on performance hardware. It demonstrates practical low-level debugging and systems integration beyond typical application engineering.",
-      type: "Low-Level Systems",
-    },
-    {
-      name: "Predictive Customer Insights Platform",
-      description:
-        "Built a data-driven product around customer segmentation, churn-risk modeling, and behavioral analysis. The focus is business impact: helping teams act earlier on retention and growth signals.",
-      type: "Applied AI",
-    },
-    {
-      name: "DJI Drone GPS and ATTI Control Work",
-      description:
-        "Hardware-aware control work involving drone behavior, GPS state handling, and ATTI-related experimentation. It shows the ability to bridge software logic with real-world embedded and physical systems.",
-      type: "Hardware Lab",
-    },
-    {
-      name: "Scalable Mobile Infrastructure",
-      description:
-        "Professional engineering work on backend and platform capabilities supporting mobile experiences at scale. Positioned as infrastructure and systems architecture rather than generic app development.",
-      type: "Systems Architecture",
-    },
-    {
-      name: "5G Static Routing Systems",
-      description:
-        "Implemented performance-sensitive routing and service logic in telecom-oriented environments. This work reflects strong backend fundamentals in latency-aware and reliability-focused systems.",
-      type: "Network Systems",
-    },
-    {
-      name: "Computer Vision Research Projects",
-      description:
-        "Explored image processing and vision workflows using Python-based tooling. These projects complement systems work with practical ML and perception experience.",
-      githubLink: "https://github.com/nazero3/EyElavation.git",
-      type: "Computer Vision",
-    },
-    {
-      name: "Localeats",
-      description:
-        "A collaborative product project covering backend development, APIs, and platform functionality for food discovery. Useful as supporting evidence of full-stack delivery, while the portfolio now emphasizes deeper systems work first.",
-      githubLink: "https://github.com/nazero3/Localeats",
-      type: "Web App",
-    },
-  ];
+const Projects = ({ content, isHomepage = false, isArabic = false }) => {
+  const recentWorks = content.featuredProjects;
+  const projects = content.supportingProjects;
 
   return (
-    <div className={`projects ${isHomepage ? "projects-homepage" : ""}`}>
-      <h2>{isHomepage ? "Featured Projects" : "My Work"}</h2>
-      <p className="projects-intro">
-        Selected work that shows both engineering depth in systems and AI, and
-        the ability to deliver production-ready full-stack applications for
-        real clients and business needs.
-      </p>
+    <div className={`projects ${isHomepage ? "projects-homepage" : ""} ${isArabic ? "projects-ar" : ""}`}>
+      <h2>{isHomepage ? content.homepageTitle : content.pageTitle}</h2>
+      <p className="projects-intro">{content.intro}</p>
       
       <div className="recent-works-section">
-        <h3 className="section-title">End-to-End Delivery</h3>
+        <h3 className="section-title">{content.featuredTitle}</h3>
         <div className="projects-grid">
           {recentWorks.map((project, index) => (
             <motion.div
@@ -96,11 +23,21 @@ const Projects = ({ isHomepage = false }) => {
               transition={{ delay: index * 0.1, duration: 0.5 }}
               whileHover={{ y: -5 }}
             >
-              {project.featured && <span className="featured-badge">Featured</span>}
+              {project.featured && <span className="featured-badge">{content.featuredBadge}</span>}
               <div className="project-type">{project.type}</div>
               <h3>{project.name}</h3>
               <p>{project.description}</p>
               <div className="project-links">
+                {project.liveLink && (
+                  <a
+                    href={project.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-link primary"
+                  >
+                    {content.liveLinkLabel}
+                  </a>
+                )}
                 {project.websiteLink && (
                   <a
                     href={project.websiteLink}
@@ -108,7 +45,17 @@ const Projects = ({ isHomepage = false }) => {
                     rel="noopener noreferrer"
                     className="project-link primary"
                   >
-                    Visit Website
+                    {content.websiteLinkLabel}
+                  </a>
+                )}
+                {project.repoLink && (
+                  <a
+                    href={project.repoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-link"
+                  >
+                    {content.githubLinkLabel}
                   </a>
                 )}
               </div>
@@ -118,7 +65,7 @@ const Projects = ({ isHomepage = false }) => {
       </div>
 
       <div className="other-projects-section">
-        <h3 className="section-title">Systems and AI Depth</h3>
+        <h3 className="section-title">{content.supportingTitle}</h3>
         <div className="projects-grid">
           {projects.map((project, index) => (
             <motion.div
@@ -133,14 +80,34 @@ const Projects = ({ isHomepage = false }) => {
               <h3>{project.name}</h3>
               <p>{project.description}</p>
               <div className="project-links">
-                {project.githubLink && (
+                {project.liveLink && (
                   <a
-                    href={project.githubLink}
+                    href={project.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-link primary"
+                  >
+                    {content.liveLinkLabel}
+                  </a>
+                )}
+                {project.websiteLink && (
+                  <a
+                    href={project.websiteLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-link primary"
+                  >
+                    {content.websiteLinkLabel}
+                  </a>
+                )}
+                {project.repoLink && (
+                  <a
+                    href={project.repoLink}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="project-link"
                   >
-                    View on GitHub
+                    {content.githubLinkLabel}
                   </a>
                 )}
               </div>

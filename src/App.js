@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import "./App.css";
@@ -9,33 +9,51 @@ import Projects from "./components/Projects";
 import ContactMe from "./components/ContactMe";
 import Skills from "./components/Skills";
 import WhatsAppButton from "./components/WhatsAppButton";
+import siteContent from "./content/siteContent";
 
 function App() {
+  const [language, setLanguage] = useState("en");
   const pageTransition = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
     exit: { opacity: 0, y: -20 },
     transition: { duration: 0.5 },
   };
+  const isArabic = language === "ar";
+  const content = siteContent[language];
+
+  useEffect(() => {
+    document.documentElement.lang = language;
+    document.documentElement.dir = isArabic ? "rtl" : "ltr";
+  }, [isArabic, language]);
 
   return (
     <Router>
-      <div className="App">
+      <div className={`App app-shell ${isArabic ? "rtl" : "ltr"}`}>
         <nav className="navigation">
-          <Link to="/">Home</Link>
-          <Link to="/skills">Skills & Tools</Link>
-          <Link to="/experience">Experience</Link>
-          <Link to="/projects">Projects</Link>
-          <Link to="/contact">Contact Me</Link>
+          <div className="navigation-links">
+            <Link to="/">{content.nav.home}</Link>
+            <Link to="/skills">{content.nav.skills}</Link>
+            <Link to="/experience">{content.nav.experience}</Link>
+            <Link to="/projects">{content.nav.projects}</Link>
+            <Link to="/contact">{content.nav.contact}</Link>
+          </div>
+          <button
+            type="button"
+            className="language-toggle"
+            onClick={() => setLanguage(isArabic ? "en" : "ar")}
+          >
+            {content.nav.toggle}
+          </button>
         </nav>
         <Routes>
           <Route
             path="/"
             element={
               <motion.div {...pageTransition}>
-                <Home />
+                <Home content={content.home} isArabic={isArabic} />
                 <AboutMe />
-                <Projects isHomepage />
+                <Projects content={content.projects} isHomepage isArabic={isArabic} />
               </motion.div>
             }
           />
@@ -59,7 +77,7 @@ function App() {
             path="/projects"
             element={
               <motion.div {...pageTransition}>
-                <Projects />
+                <Projects content={content.projects} isArabic={isArabic} />
               </motion.div>
             }
           />

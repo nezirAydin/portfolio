@@ -1,6 +1,6 @@
 .navigation {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
@@ -11,6 +11,13 @@
   top: 0;
   z-index: 100;
   border-bottom: 1px solid var(--border-color);
+}
+
+.navigation-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .navigation a {
@@ -46,15 +53,48 @@
   width: 80%;
 }
 
+.language-toggle {
+  border: 1px solid var(--primary-light);
+  background: var(--bg-white);
+  color: var(--primary-color);
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.language-toggle:hover {
+  background: var(--primary-color);
+  color: white;
+  box-shadow: var(--shadow-md);
+}
+
+.app-shell.rtl .navigation {
+  direction: rtl;
+}
+
 @media (max-width: 768px) {
   .navigation {
     flex-wrap: wrap;
     padding: 0.75rem 1rem;
+    gap: 0.75rem;
+    justify-content: center;
+  }
+
+  .navigation-links {
+    justify-content: center;
   }
 
   .navigation a {
     margin: 0.25rem 0.5rem;
     font-size: 0.9rem;
     padding: 0.4rem 0.8rem;
+  }
+
+  .language-toggle {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.9rem;
   }
 }

@@ -176,6 +176,20 @@
   opacity: 0.9;
 }
 
+.projects-ar {
+  direction: rtl;
+}
+
+.projects-ar .section-title,
+.projects-ar .project-type {
+  align-self: flex-end;
+}
+
+.projects-ar .featured-badge {
+  right: auto;
+  left: 1rem;
+}
+
 @media (max-width: 768px) {
   .projects {
     padding: 2rem 1rem;

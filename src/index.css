@@ -36,6 +36,10 @@ body {
   line-height: 1.6;
 }
 
+html[dir="rtl"] body {
+  text-align: right;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

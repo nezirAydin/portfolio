@@ -66,6 +66,15 @@
   box-shadow: var(--shadow-sm);
 }
 
+.home-ar .home-header,
+.home-ar .home-highlights {
+  direction: rtl;
+}
+
+.home-ar .home-highlights {
+  text-align: right;
+}
+
 @media (max-width: 768px) {
   .home {
     padding: 2rem 1rem;
@@ -87,5 +96,9 @@
   .home-highlights {
     grid-template-columns: 1fr;
     text-align: left;
+  }
+
+  .home-ar .home-highlights {
+    text-align: right;
   }
 }
