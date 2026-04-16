@@ -35,6 +35,7 @@ function App() {
               <motion.div {...pageTransition}>
                 <Home />
                 <AboutMe />
+                <Projects isHomepage />
               </motion.div>
             }
           />

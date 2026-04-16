@@ -3,6 +3,12 @@ import { motion } from "framer-motion";
 import "./Home.css";
 
 const Home = () => {
+  const highlights = [
+    "Systems and AI infrastructure engineer focused on Linux, performance, and governance.",
+    "Master's-level background with hands-on work across low-level software and production systems.",
+    "Building technical solutions for expensive problems, from LLM gateways to hardware-aware platforms.",
+  ];
+
   return (
     <motion.div
       className="home"
@@ -16,16 +22,30 @@ const Home = () => {
           animate={{ scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          Welcome to Nezir Aydın's Portfolio
+          Systems and AI Infrastructure Engineer
         </motion.h1>
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 1 }}
         >
-          Experienced Software Engineer with expertise in C++, Python, and
-          full-stack development. Explore my journey, skills, and projects!
+          I build high-performance software across Linux systems, AI gateways,
+          and production-grade backend platforms. This portfolio focuses on the
+          engineering depth behind the work, not just polished interfaces.
         </motion.p>
+        <div className="home-highlights">
+          {highlights.map((highlight, index) => (
+            <motion.div
+              className="home-highlight"
+              key={highlight}
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.7 + index * 0.15, duration: 0.5 }}
+            >
+              {highlight}
+            </motion.div>
+          ))}
+        </div>
       </header>
     </motion.div>
   );
