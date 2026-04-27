@@ -15,7 +15,7 @@ const AboutMe = () => {
         <div className="about-me-text">
           <h2>About Me</h2>
           <p>
-            Hi, I'm Nezir Aydın, a software engineer with over 3 years of
+            Hi, I'm Nezir Aydın, a software engineer with over 5+ years of
             experience in developing high-performance solutions using C++,
             Python, and Node.js. My expertise spans from building efficient
             static routing systems for 5G services to creating full-stack web
