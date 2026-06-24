@@ -52,7 +52,7 @@ function App() {
             element={
               <motion.div {...pageTransition}>
                 <Home content={content.home} isArabic={isArabic} />
-                <AboutMe />
+                <AboutMe content={content.aboutMe} isArabic={isArabic} />
                 <Projects content={content.projects} isHomepage isArabic={isArabic} />
               </motion.div>
             }
@@ -61,7 +61,7 @@ function App() {
             path="/skills"
             element={
               <motion.div {...pageTransition}>
-                <Skills />
+                <Skills content={content.skills} isArabic={isArabic} />
               </motion.div>
             }
           />
@@ -69,7 +69,7 @@ function App() {
             path="/experience"
             element={
               <motion.div {...pageTransition}>
-                <Experience />
+                <Experience content={content.experience} isArabic={isArabic} />
               </motion.div>
             }
           />
@@ -85,7 +85,7 @@ function App() {
             path="/contact"
             element={
               <motion.div {...pageTransition}>
-                <ContactMe />
+                <ContactMe content={content.contact} isArabic={isArabic} />
               </motion.div>
             }
           />

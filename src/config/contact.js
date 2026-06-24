@@ -4,7 +4,7 @@
 export const WHATSAPP_NUMBER = "905530652999"; // TODO: Update with your actual WhatsApp number
 
 export const CONTACT_INFO = {
-  email: "nezir.aydin94@gmail.com",
+  email: "nazerrabah1994@gmail.com",
   linkedin: "https://www.linkedin.com/in/nezir-ayd%C4%B1n-363364b5/",
   github: "https://github.com/nazero3",
 };

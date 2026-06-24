@@ -101,6 +101,24 @@
   margin-bottom: 0;
 }
 
+.skills-page-ar .skills-category h3 {
+  text-transform: none;
+}
+
+.skills-page-ar .skills-category li {
+  padding-left: 1rem;
+  padding-right: 2.5rem;
+}
+
+.skills-page-ar .skills-category li::before {
+  left: auto;
+  right: 0.75rem;
+}
+
+.skills-page-ar .skills-category li:hover {
+  transform: translateX(-5px);
+}
+
 @media (max-width: 768px) {
   .skills-page {
     padding: 2rem 1rem;

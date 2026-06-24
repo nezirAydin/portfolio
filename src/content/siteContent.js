@@ -18,6 +18,105 @@ const siteContent = {
         "Master's-level engineering background with a focus on solving expensive technical problems.",
       ],
     },
+    aboutMe: {
+      title: "About Me",
+      imageAlt: "Nazer Rabah",
+      paragraphs: [
+        "Hi, I'm Nazer Rabah, a software engineer with over 5+ years of experience in developing high-performance solutions using C++, Python, and Node.js. My expertise spans from building efficient static routing systems for 5G services to creating full-stack web applications with frameworks like React and Angular.",
+        "I have a strong passion for learning and solving complex engineering challenges, especially in low-level systems. I am always looking for opportunities to apply my skills in a dynamic and growth-oriented environment. My journey in the tech industry has equipped me with a problem-solving mindset, allowing me to thrive in fast-paced environments.",
+        "Beyond coding, I enjoy reading books about productivity and startups, and I'm always eager to embrace new challenges and grow as a professional. Let's connect and explore what we can build together!",
+      ],
+    },
+    skills: {
+      pageTitle: "Skills & Tools",
+      categories: [
+        {
+          title: "Programming Languages",
+          items: ["C++", "Python", "JavaScript/Node.js"],
+        },
+        {
+          title: "Frameworks & Libraries",
+          items: ["React", "Angular", "Flask", "DPDK"],
+        },
+        {
+          title: "Databases",
+          items: ["MongoDB", "PostgreSQL", "Mongoose"],
+        },
+        {
+          title: "Operating Systems",
+          items: ["Linux", "Red Hat", "Rocky Linux", "Customizing Linux"],
+        },
+        {
+          title: "Tools",
+          items: ["Git", "Jira", "Confluence", "ZeroMQ", "Arduino"],
+        },
+        {
+          title: "Domains",
+          items: [
+            "IoT",
+            "Full-stack Development",
+            "Static Routing Systems",
+            "5G Services",
+            "Computer Vision",
+          ],
+        },
+      ],
+    },
+    experience: {
+      pageTitle: "Experience",
+      items: [
+        {
+          company: "Karel Electronics",
+          role: "Design Software Engineer",
+          duration: "May 2022 – July 2024",
+          location: "Ankara, TR",
+          description: [
+            "Developed and maintained high-performance software solutions for static routing, load balancing, and 5G services (UPF, AMF, SMSF) using C++, Node.js, and Python.",
+            "Achieved packet processing efficiency with speeds of up to 200 Gbps through the use of DPDK and PcapPlus libraries.",
+            "Led the development of full-stack applications using ZeroMQ, Redis, Mongoose, and PostgreSQL with React/Angular for frontend.",
+            "Customized a Linux kernel image for admin OS, improving system performance and security.",
+          ],
+        },
+        {
+          company: "Re:Coded (bootcamp)",
+          role: "Backend Engineer",
+          duration: "Mar 2023 – Aug 2023",
+          location: "Remote",
+          description: [
+            "Developed a backend application called Localeats using Node.js and Mongoose.",
+            "Collaborated with frontend developers to implement the UI using React and designed the user experience with Figma.",
+            "Successfully deployed the application, enhancing user experience in food discovery.",
+          ],
+        },
+        {
+          company: "Medpointr",
+          role: "Software Engineer - Computer Vision",
+          duration: "Nov 2021 – Apr 2022",
+          location: "Ankara, TR",
+          description: [
+            "Worked on designing prototypes and improving code using Qt and C++.",
+            "Enhanced the functionality and performance of computer vision systems, contributing to healthcare technology.",
+          ],
+        },
+        {
+          company: "Besmak",
+          role: "Mechatronics Engineer",
+          duration: "Jun 2018 – Feb 2020",
+          location: "Ankara, TR",
+          description: [
+            "Designed machines testing machines (fatigue grips, electromechanical machines, bending test machines,...) using Solidworks and Auto-cad.",
+            "Designed hydraulics cylinders and schematic drawings.",
+          ],
+        },
+        {
+          company: "ABC Koleji",
+          role: "English Teacher",
+          duration: "Feb 2015 – May 2020",
+          location: "Ankara, TR",
+          description: ["Taught English language Level A1-A2"],
+        },
+      ],
+    },
     projects: {
       homepageTitle: "Featured Projects",
       pageTitle: "My Work",
@@ -31,20 +130,29 @@ const siteContent = {
       githubLinkLabel: "View on GitHub",
       featuredProjects: [
         {
-          name: "LLM Gateway with Governance Engine",
+          name: "ERP System",
           description:
-            "Designed an AI gateway focused on policy enforcement, secure model access, and operational control. This project highlights AI infrastructure thinking around governance, reliability, and enterprise readiness.",
-          type: "AI Infrastructure",
+            "End-to-end operations platform for production and retail: raw material receiving, recipe-based production, factory-to-store transfers, inventory tracking, daily KPIs, and role-based approval workflows.",
+          type: "Full-Stack Application",
           featured: true,
         },
         {
-          name: "Mehdi Group",
+          name: "Investment App",
           description:
-            "A corporate web platform presented as full-stack proof: branding, landing-page architecture, and production delivery for a business-facing presence. It demonstrates that the same engineer who works close to the system can also ship polished client-facing software.",
+            "A frontend-focused product project that demonstrates UI implementation, state handling, and app-level interaction design for a practical financial workflow.",
+          type: "Frontend Application",
+          featured: true,
+          repoLink: "https://github.com/nazero3/investment-app",
+          liveLink: "https://nazero3.github.io/investment-app/",
+        },
+        {
+          name: "Sweet Shop",
+          description:
+            "Multi-state online ordering platform for handcrafted oriental sweets. Customers select a store by region, browse the menu, and complete checkout with bilingual Arabic and English support.",
           type: "Full-Stack Application",
           featured: true,
-          websiteLink: "https://mehdigroups.com",
-          repoLink: "https://github.com/nazero3/Mehdi-Group",
+          repoLink: "https://github.com/nazero3/sweet-shop",
+          liveLink: "https://nazero3.github.io/sweet-shop/",
         },
         {
           name: "EU4Less",
@@ -56,6 +164,20 @@ const siteContent = {
       ],
       supportingProjects: [
         {
+          name: "LLM Gateway with Governance Engine",
+          description:
+            "Designed an AI gateway focused on policy enforcement, secure model access, and operational control. This project highlights AI infrastructure thinking around governance, reliability, and enterprise readiness.",
+          type: "AI Infrastructure",
+        },
+        {
+          name: "Mehdi Group",
+          description:
+            "A corporate web platform presented as full-stack proof: branding, landing-page architecture, and production delivery for a business-facing presence. It demonstrates that the same engineer who works close to the system can also ship polished client-facing software.",
+          type: "Full-Stack Application",
+          websiteLink: "https://mehdigroups.com",
+          repoLink: "https://github.com/nazero3/Mehdi-Group",
+        },
+        {
           name: "Linux Driver and Kernel Workflow Lab",
           description:
             "Deep work around Ubuntu, NVIDIA drivers, kernel modules, and platform-specific configuration on performance hardware. It demonstrates practical low-level debugging and systems integration beyond typical application engineering.",
@@ -66,12 +188,6 @@ const siteContent = {
           description:
             "Built a data-driven product around customer segmentation, churn-risk modeling, and behavioral analysis. The focus is business impact: helping teams act earlier on retention and growth signals.",
           type: "Applied AI",
-        },
-        {
-          name: "DJI Drone GPS and ATTI Control Work",
-          description:
-            "Hardware-aware control work involving drone behavior, GPS state handling, and ATTI-related experimentation. It shows the ability to bridge software logic with real-world embedded and physical systems.",
-          type: "Hardware Lab",
         },
         {
           name: "Scalable Mobile Infrastructure",
@@ -94,26 +210,24 @@ const siteContent = {
           liveLink: "https://nazero3.github.io/Localeats/",
         },
         {
-          name: "Investment App",
-          description:
-            "A frontend-focused product project that demonstrates UI implementation, state handling, and app-level interaction design for a practical financial workflow.",
-          type: "Frontend Application",
-          repoLink: "https://github.com/nazero3/investment-app",
-          liveLink: "https://nazero3.github.io/investment-app/",
-        },
-        {
-          name: "ERP System",
-          description:
-            "End-to-end operations platform for a traditional baklava production business: raw material receiving, recipe-based production, factory-to-store transfers, inventory tracking, daily KPIs, and role-based approval workflows.",
-          type: "Full-Stack Application",
-        },
-        {
           name: "SovereignRoom — Decentralized Matrix Chat",
           description:
             "Self-hosted, auditable team messaging built on the Matrix protocol. Includes Synapse homeserver deployment, a native Android client, Ansible production kit, end-to-end encryption, and federation between independent servers.",
           type: "Decentralized Systems",
         },
       ],
+    },
+    contact: {
+      pageTitle: "Get In Touch",
+      subtitle:
+        "I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.",
+      whatsappMessage: "Hello! I'd like to connect with you.",
+      cards: {
+        email: { title: "Email" },
+        whatsapp: { title: "WhatsApp", action: "Chat with me" },
+        linkedin: { title: "LinkedIn", action: "View Profile" },
+        github: { title: "GitHub", action: "View Projects" },
+      },
     },
   },
   ar: {
@@ -135,6 +249,105 @@ const siteContent = {
         "خلفية أكاديمية على مستوى الماجستير مع تركيز على حل المشكلات التقنية عالية القيمة.",
       ],
     },
+    aboutMe: {
+      title: "عني",
+      imageAlt: "ناظر رباح",
+      paragraphs: [
+        "مرحباً، أنا ناظر رباح، مهندس برمجيات بخبرة تزيد عن 5 سنوات في تطوير حلول عالية الأداء باستخدام C++ وPython وNode.js. تمتد خبرتي من بناء أنظمة التوجيه الثابت الفعالة لخدمات 5G إلى إنشاء تطبيقات ويب متكاملة بأطر عمل مثل React وAngular.",
+        "لدي شغف قوي بالتعلم وحل التحديات الهندسية المعقدة، خاصة في الأنظمة منخفضة المستوى. أسعى دائماً لتطبيق مهاراتي في بيئة ديناميكية موجهة للنمو. رحلتي في صناعة التقنية زودتني بعقلية حل المشكلات، مما يمكنني من التألق في البيئات سريعة الإيقاع.",
+        "بعيداً عن البرمجة، أستمتع بقراءة الكتب عن الإنتاجية والشركات الناشئة، وأتطلع دائماً لمواجهة تحديات جديدة والنمو كمحترف. لنتواصل ونستكشف ما يمكننا بناؤه معاً!",
+      ],
+    },
+    skills: {
+      pageTitle: "المهارات والأدوات",
+      categories: [
+        {
+          title: "لغات البرمجة",
+          items: ["C++", "Python", "JavaScript/Node.js"],
+        },
+        {
+          title: "أطر العمل والمكتبات",
+          items: ["React", "Angular", "Flask", "DPDK"],
+        },
+        {
+          title: "قواعد البيانات",
+          items: ["MongoDB", "PostgreSQL", "Mongoose"],
+        },
+        {
+          title: "أنظمة التشغيل",
+          items: ["Linux", "Red Hat", "Rocky Linux", "تخصيص لينكس"],
+        },
+        {
+          title: "الأدوات",
+          items: ["Git", "Jira", "Confluence", "ZeroMQ", "Arduino"],
+        },
+        {
+          title: "المجالات",
+          items: [
+            "إنترنت الأشياء",
+            "تطوير متكامل",
+            "أنظمة التوجيه الثابت",
+            "خدمات 5G",
+            "رؤية حاسوبية",
+          ],
+        },
+      ],
+    },
+    experience: {
+      pageTitle: "الخبرة",
+      items: [
+        {
+          company: "Karel Electronics",
+          role: "مهندس برمجيات تصميم",
+          duration: "مايو 2022 – يوليو 2024",
+          location: "أنقرة، تركيا",
+          description: [
+            "تطوير وصيانة حلول برمجية عالية الأداء للتوجيه الثابت، وموازنة الأحمال، وخدمات 5G (UPF وAMF وSMSF) باستخدام C++ وNode.js وPython.",
+            "تحقيق كفاءة معالجة حزم بسرعة تصل إلى 200 جيجابت في الثانية باستخدام مكتبات DPDK وPcapPlus.",
+            "قيادة تطوير تطبيقات متكاملة باستخدام ZeroMQ وRedis وMongoose وPostgreSQL مع React/Angular للواجهة الأمامية.",
+            "تخصيص صورة نواة لينكس لنظام الإدارة، مما حسّن الأداء والأمان.",
+          ],
+        },
+        {
+          company: "Re:Coded (bootcamp)",
+          role: "مهندس خلفية",
+          duration: "مارس 2023 – أغسطس 2023",
+          location: "عن بُعد",
+          description: [
+            "تطوير تطبيق خلفي باسم Localeats باستخدام Node.js وMongoose.",
+            "التعاون مع مطوري الواجهة الأمامية لتنفيذ الواجهة باستخدام React وتصميم تجربة المستخدم عبر Figma.",
+            "نشر التطبيق بنجاح وتحسين تجربة المستخدم في اكتشاف الطعام.",
+          ],
+        },
+        {
+          company: "Medpointr",
+          role: "مهندس برمجيات - رؤية حاسوبية",
+          duration: "نوفمبر 2021 – أبريل 2022",
+          location: "أنقرة، تركيا",
+          description: [
+            "العمل على تصميم النماذج الأولية وتحسين الشيفرة باستخدام Qt وC++.",
+            "تعزيز وظائف وأداء أنظمة الرؤية الحاسوبية، مع المساهمة في تقنيات الرعاية الصحية.",
+          ],
+        },
+        {
+          company: "Besmak",
+          role: "مهندس ميكاترونكس",
+          duration: "يونيو 2018 – فبراير 2020",
+          location: "أنقرة، تركيا",
+          description: [
+            "تصميم آلات اختبار (مقابض إجهاد، آلات كهروميكانيكية، آلات اختبار الانحناء،...) باستخدام Solidworks وAutoCAD.",
+            "تصميم أسطوانات هيدروليكية ومخططات تفصيلية.",
+          ],
+        },
+        {
+          company: "ABC Koleji",
+          role: "معلم لغة إنجليزية",
+          duration: "فبراير 2015 – مايو 2020",
+          location: "أنقرة، تركيا",
+          description: ["تدريس اللغة الإنجليزية للمستويات A1-A2"],
+        },
+      ],
+    },
     projects: {
       homepageTitle: "مشاريع مميزة",
       pageTitle: "أعمالي",
@@ -148,20 +361,29 @@ const siteContent = {
       githubLinkLabel: "عرض على GitHub",
       featuredProjects: [
         {
-          name: "بوابة LLM مع محرك حوكمة",
+          name: "نظام ERP",
           description:
-            "تصميم بوابة ذكاء اصطناعي تركّز على فرض السياسات، وتأمين الوصول إلى النماذج، والتحكم التشغيلي. يبرز هذا المشروع التفكير المعماري في الحوكمة والاعتمادية والاستعداد للاستخدام المؤسسي.",
-          type: "بنية ذكاء اصطناعي",
+            "منصة عمليات متكاملة للإنتاج والتجزئة: استلام المواد الخام، الإنتاج حسب الوصفات، النقل من المصنع إلى المتاجر، تتبع المخزون، مؤشرات الأداء اليومية، وسير عمل الموافقات حسب الصلاحيات.",
+          type: "تطبيق متكامل",
           featured: true,
         },
         {
-          name: "Mehdi Group",
+          name: "Investment App",
           description:
-            "منصة ويب مؤسسية تُعرض كدليل على القدرة الكاملة في التطوير: الهوية، وبنية صفحات الهبوط، وتسليم منتج جاهز للأعمال. توضح أن المهندس القادر على العمل قرب النظام يستطيع أيضاً إطلاق منتج احترافي موجه للعملاء.",
+            "مشروع يركز على الواجهة الأمامية ويعرض تنفيذ الواجهات وإدارة الحالة وتصميم التفاعل ضمن تدفق عملي مرتبط بالاستثمار.",
+          type: "تطبيق واجهات أمامية",
+          featured: true,
+          repoLink: "https://github.com/nazero3/investment-app",
+          liveLink: "https://nazero3.github.io/investment-app/",
+        },
+        {
+          name: "Sweet Shop",
+          description:
+            "منصة طلب إلكتروني متعددة المناطق للحلويات الشرقية المصنوعة يدوياً. يختار العملاء المتجر حسب المنطقة، ويتصفحون القائمة، ويكملون الطلب بدعم عربي وإنجليزي.",
           type: "تطبيق متكامل",
           featured: true,
-          websiteLink: "https://mehdigroups.com",
-          repoLink: "https://github.com/nazero3/Mehdi-Group",
+          repoLink: "https://github.com/nazero3/sweet-shop",
+          liveLink: "https://nazero3.github.io/sweet-shop/",
         },
         {
           name: "EU4Less",
@@ -173,6 +395,20 @@ const siteContent = {
       ],
       supportingProjects: [
         {
+          name: "بوابة LLM مع محرك حوكمة",
+          description:
+            "تصميم بوابة ذكاء اصطناعي تركّز على فرض السياسات، وتأمين الوصول إلى النماذج، والتحكم التشغيلي. يبرز هذا المشروع التفكير المعماري في الحوكمة والاعتمادية والاستعداد للاستخدام المؤسسي.",
+          type: "بنية ذكاء اصطناعي",
+        },
+        {
+          name: "Mehdi Group",
+          description:
+            "منصة ويب مؤسسية تُعرض كدليل على القدرة الكاملة في التطوير: الهوية، وبنية صفحات الهبوط، وتسليم منتج جاهز للأعمال. توضح أن المهندس القادر على العمل قرب النظام يستطيع أيضاً إطلاق منتج احترافي موجه للعملاء.",
+          type: "تطبيق متكامل",
+          websiteLink: "https://mehdigroups.com",
+          repoLink: "https://github.com/nazero3/Mehdi-Group",
+        },
+        {
           name: "مختبر تعريفات لينكس وسير عمل النواة",
           description:
             "عمل عميق على أوبونتو وتعريفات NVIDIA ووحدات النواة وإعدادات الأجهزة عالية الأداء. يوضح هذا المشروع مهارات عملية في التصحيح منخفض المستوى وتكامل الأنظمة.",
@@ -183,12 +419,6 @@ const siteContent = {
           description:
             "منصة تعتمد على البيانات لتقسيم العملاء والتنبؤ بخطر الانسحاب وتحليل السلوك. التركيز هنا على الأثر التجاري ومساعدة الفرق على التحرك مبكراً.",
           type: "ذكاء اصطناعي تطبيقي",
-        },
-        {
-          name: "التحكم في DJI Drone بنظام GPS وATTI",
-          description:
-            "عمل مرتبط بالأجهزة يشمل سلوك الطائرة بدون طيار وإدارة حالة GPS وتجارب وضع ATTI. يوضح القدرة على الربط بين منطق البرمجيات والأنظمة الفيزيائية الحقيقية.",
-          type: "مختبر عتاد",
         },
         {
           name: "بنية تحتية قابلة للتوسع لتطبيقات الجوال",
@@ -211,26 +441,24 @@ const siteContent = {
           liveLink: "https://nazero3.github.io/Localeats/",
         },
         {
-          name: "Investment App",
-          description:
-            "مشروع يركز على الواجهة الأمامية ويعرض تنفيذ الواجهات وإدارة الحالة وتصميم التفاعل ضمن تدفق عملي مرتبط بالاستثمار.",
-          type: "تطبيق واجهات أمامية",
-          repoLink: "https://github.com/nazero3/investment-app",
-          liveLink: "https://nazero3.github.io/investment-app/",
-        },
-        {
-          name: "نظام ERP",
-          description:
-            "منصة عمليات متكاملة لمصنع إنتاج البكلافا التقليدي: استلام المواد الخام، الإنتاج حسب الوصفات، النقل من المصنع إلى المتاجر، تتبع المخزون، مؤشرات الأداء اليومية، وسير عمل الموافقات حسب الصلاحيات.",
-          type: "تطبيق متكامل",
-        },
-        {
           name: "SovereignRoom — دردشة Matrix اللامركزية",
           description:
             "مراسلة جماعية مستضافة ذاتياً وقابلة للتدقيق مبنية على بروتوكول Matrix. تشمل نشر خادم Synapse، تطبيق Android أصلي، حزمة Ansible للإنتاج، التشفير من طرف إلى طرف، والاتحاد بين الخوادم المستقلة.",
           type: "أنظمة لامركزية",
         },
       ],
+    },
+    contact: {
+      pageTitle: "تواصل معي",
+      subtitle:
+        "أنا منفتح دائماً لمناقشة مشاريع جديدة، أفكار إبداعية، أو فرص للمشاركة في رؤيتكم.",
+      whatsappMessage: "مرحباً! أود التواصل معك.",
+      cards: {
+        email: { title: "البريد الإلكتروني" },
+        whatsapp: { title: "واتساب", action: "تحدث معي" },
+        linkedin: { title: "لينكد إن", action: "عرض الملف الشخصي" },
+        github: { title: "جيت هب", action: "عرض المشاريع" },
+      },
     },
   },
 };

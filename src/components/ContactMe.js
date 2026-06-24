@@ -3,24 +3,22 @@ import { motion } from "framer-motion";
 import { WHATSAPP_NUMBER, CONTACT_INFO } from "../config/contact";
 import "./ContactMe.css";
 
-const ContactMe = () => {
+const ContactMe = ({ content, isArabic = false }) => {
   const handleWhatsAppClick = () => {
-    const message = encodeURIComponent("Hello! I'd like to connect with you.");
+    const message = encodeURIComponent(content.whatsappMessage);
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, "_blank");
   };
 
   return (
     <motion.div
-      className="contact-page"
+      className={`contact-page ${isArabic ? "contact-page-ar" : ""}`}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
     >
-      <h2>Get In Touch</h2>
-      <p className="contact-subtitle">
-        I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
-      </p>
-      
+      <h2>{content.pageTitle}</h2>
+      <p className="contact-subtitle">{content.subtitle}</p>
+
       <div className="contact-grid">
         <motion.div
           className="contact-card"
@@ -28,7 +26,7 @@ const ContactMe = () => {
           whileTap={{ scale: 0.95 }}
         >
           <div className="contact-icon email-icon">✉️</div>
-          <h3>Email</h3>
+          <h3>{content.cards.email.title}</h3>
           <a href={`mailto:${CONTACT_INFO.email}`}>{CONTACT_INFO.email}</a>
         </motion.div>
 
@@ -39,8 +37,8 @@ const ContactMe = () => {
           onClick={handleWhatsAppClick}
         >
           <div className="contact-icon whatsapp-icon">💬</div>
-          <h3>WhatsApp</h3>
-          <span>Chat with me</span>
+          <h3>{content.cards.whatsapp.title}</h3>
+          <span>{content.cards.whatsapp.action}</span>
         </motion.div>
 
         <motion.div
@@ -49,13 +47,13 @@ const ContactMe = () => {
           whileTap={{ scale: 0.95 }}
         >
           <div className="contact-icon linkedin-icon">💼</div>
-          <h3>LinkedIn</h3>
+          <h3>{content.cards.linkedin.title}</h3>
           <a
             href={CONTACT_INFO.linkedin}
             target="_blank"
             rel="noopener noreferrer"
           >
-            View Profile
+            {content.cards.linkedin.action}
           </a>
         </motion.div>
 
@@ -65,13 +63,13 @@ const ContactMe = () => {
           whileTap={{ scale: 0.95 }}
         >
           <div className="contact-icon github-icon">🔗</div>
-          <h3>GitHub</h3>
+          <h3>{content.cards.github.title}</h3>
           <a
             href={CONTACT_INFO.github}
             target="_blank"
             rel="noopener noreferrer"
           >
-            View Projects
+            {content.cards.github.action}
           </a>
         </motion.div>
       </div>

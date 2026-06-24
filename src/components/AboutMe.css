@@ -65,6 +65,14 @@
   font-weight: 500;
 }
 
+.about-me-ar .about-me-text {
+  text-align: right;
+}
+
+.about-me-ar .about-me h2 {
+  text-align: right;
+}
+
 @media (max-width: 968px) {
   .about-me-content {
     flex-direction: column-reverse;
@@ -83,6 +91,11 @@
 
   .about-me h2 {
     font-size: 2rem;
+    text-align: center;
+  }
+
+  .about-me-ar .about-me h2,
+  .about-me-ar .about-me-text {
     text-align: center;
   }
 }

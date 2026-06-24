@@ -104,6 +104,32 @@
   margin-bottom: 0;
 }
 
+.experience-ar .experience-card:hover {
+  transform: translateX(-10px);
+}
+
+.experience-ar .experience-card::before {
+  left: auto;
+  right: 0;
+}
+
+.experience-ar .experience-card li {
+  padding-left: 0;
+  padding-right: 1.5rem;
+  text-align: right;
+}
+
+.experience-ar .experience-card li::before {
+  left: auto;
+  right: 0;
+}
+
+.experience-ar .role,
+.experience-ar .duration-location,
+.experience-ar h3 {
+  text-align: right;
+}
+
 @media (max-width: 768px) {
   .experience {
     padding: 2rem 1rem;

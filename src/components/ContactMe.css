@@ -119,6 +119,10 @@
   transform: translateX(5px);
 }
 
+.contact-page-ar .contact-card a:hover {
+  transform: translateX(-5px);
+}
+
 @media (max-width: 768px) {
   .contact-page {
     padding: 2rem 1rem;
