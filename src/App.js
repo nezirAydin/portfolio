@@ -28,7 +28,7 @@ function App() {
   }, [isArabic, language]);
 
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <div className={`App app-shell ${isArabic ? "rtl" : "ltr"}`}>
         <nav className="navigation">
           <div className="navigation-links">
