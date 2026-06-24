@@ -11,6 +11,8 @@ import Skills from "./components/Skills";
 import WhatsAppButton from "./components/WhatsAppButton";
 import siteContent from "./content/siteContent";
 
+const routerBasename = (process.env.PUBLIC_URL || "").replace(/\/$/, "");
+
 function App() {
   const [language, setLanguage] = useState("en");
   const pageTransition = {
@@ -28,7 +30,7 @@ function App() {
   }, [isArabic, language]);
 
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router basename={routerBasename}>
       <div className={`App app-shell ${isArabic ? "rtl" : "ltr"}`}>
         <nav className="navigation">
           <div className="navigation-links">
