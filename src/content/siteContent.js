@@ -102,11 +102,10 @@ const siteContent = {
           liveLink: "https://nazero3.github.io/investment-app/",
         },
         {
-          name: "Manbaj Factory Management",
+          name: "ERP System",
           description:
             "End-to-end operations platform for a traditional baklava production business: raw material receiving, recipe-based production, factory-to-store transfers, inventory tracking, daily KPIs, and role-based approval workflows.",
           type: "Full-Stack Application",
-          repoLink: "https://github.com/nazero3/manbaj-factory",
         },
         {
           name: "SovereignRoom — Decentralized Matrix Chat",
@@ -220,11 +219,10 @@ const siteContent = {
           liveLink: "https://nazero3.github.io/investment-app/",
         },
         {
-          name: "نظام إدارة مصنع ماباج",
+          name: "نظام ERP",
           description:
             "منصة عمليات متكاملة لمصنع إنتاج البكلافا التقليدي: استلام المواد الخام، الإنتاج حسب الوصفات، النقل من المصنع إلى المتاجر، تتبع المخزون، مؤشرات الأداء اليومية، وسير عمل الموافقات حسب الصلاحيات.",
           type: "تطبيق متكامل",
-          repoLink: "https://github.com/nazero3/manbaj-factory",
         },
         {
           name: "SovereignRoom — دردشة Matrix اللامركزية",
