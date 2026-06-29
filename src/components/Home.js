@@ -18,6 +18,16 @@ const Home = ({ content, isArabic }) => {
         >
           {content.title}
         </motion.h1>
+        {content.subtitle && (
+          <motion.p
+            className="home-subtitle"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3, duration: 0.8 }}
+          >
+            {content.subtitle}
+          </motion.p>
+        )}
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

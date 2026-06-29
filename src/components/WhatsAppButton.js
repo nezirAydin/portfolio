@@ -3,12 +3,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import { WHATSAPP_NUMBER } from "../config/contact";
 import "./WhatsAppButton.css";
 
-const WhatsAppButton = () => {
+const WhatsAppButton = ({ message, tooltip }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleClick = () => {
-    const message = encodeURIComponent("Hello! I'd like to connect with you.");
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, "_blank");
+    const messageText = encodeURIComponent(message);
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${messageText}`, "_blank");
   };
 
   return (
@@ -61,7 +61,7 @@ const WhatsAppButton = () => {
             exit={{ opacity: 0, x: 10 }}
             transition={{ duration: 0.2 }}
           >
-            Chat on WhatsApp
+            {tooltip}
           </motion.span>
         )}
       </AnimatePresence>

@@ -9,6 +9,7 @@ import Projects from "./components/Projects";
 import ContactMe from "./components/ContactMe";
 import Skills from "./components/Skills";
 import WhatsAppButton from "./components/WhatsAppButton";
+import IUTechPartner from "./components/IUTechPartner";
 import siteContent from "./content/siteContent";
 
 function App() {
@@ -25,17 +26,22 @@ function App() {
   useEffect(() => {
     document.documentElement.lang = language;
     document.documentElement.dir = isArabic ? "rtl" : "ltr";
-  }, [isArabic, language]);
+    document.title = content.meta.title;
+  }, [isArabic, language, content.meta.title]);
 
   return (
     <Router>
       <div className={`App app-shell ${isArabic ? "rtl" : "ltr"}`}>
         <nav className="navigation">
+          <Link to="/" className="nav-brand">
+            {content.nav.brand}
+          </Link>
           <div className="navigation-links">
             <Link to="/">{content.nav.home}</Link>
             <Link to="/skills">{content.nav.skills}</Link>
             <Link to="/experience">{content.nav.experience}</Link>
             <Link to="/projects">{content.nav.projects}</Link>
+            <Link to="/iutech">{content.nav.partner}</Link>
             <Link to="/contact">{content.nav.contact}</Link>
           </div>
           <button
@@ -53,6 +59,7 @@ function App() {
               <motion.div {...pageTransition}>
                 <Home content={content.home} isArabic={isArabic} />
                 <AboutMe content={content.aboutMe} isArabic={isArabic} />
+                <IUTechPartner content={content.partner} isArabic={isArabic} isHomepage />
                 <Projects content={content.projects} isHomepage isArabic={isArabic} />
               </motion.div>
             }
@@ -82,6 +89,14 @@ function App() {
             }
           />
           <Route
+            path="/iutech"
+            element={
+              <motion.div {...pageTransition}>
+                <IUTechPartner content={content.partner} isArabic={isArabic} />
+              </motion.div>
+            }
+          />
+          <Route
             path="/contact"
             element={
               <motion.div {...pageTransition}>
@@ -90,7 +105,10 @@ function App() {
             }
           />
         </Routes>
-        <WhatsAppButton />
+        <WhatsAppButton
+          message={content.contact.whatsappMessage}
+          tooltip={content.contact.whatsappTooltip}
+        />
       </div>
     </Router>
   );

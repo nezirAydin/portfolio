@@ -37,8 +37,16 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   line-height: 1.2;
+}
+
+.home-subtitle {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
 }
 
 .home-header p {
