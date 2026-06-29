@@ -135,6 +135,7 @@ const siteContent = {
             "End-to-end operations platform for production and retail: raw material receiving, recipe-based production, factory-to-store transfers, inventory tracking, daily KPIs, and role-based approval workflows.",
           type: "Full-Stack Application",
           featured: true,
+          liveLink: "https://nazero3.github.io/baklava-factory/",
         },
         {
           name: "Investment App",
@@ -366,6 +367,7 @@ const siteContent = {
             "منصة عمليات متكاملة للإنتاج والتجزئة: استلام المواد الخام، الإنتاج حسب الوصفات، النقل من المصنع إلى المتاجر، تتبع المخزون، مؤشرات الأداء اليومية، وسير عمل الموافقات حسب الصلاحيات.",
           type: "تطبيق متكامل",
           featured: true,
+          liveLink: "https://nazero3.github.io/baklava-factory/",
         },
         {
           name: "Investment App",
