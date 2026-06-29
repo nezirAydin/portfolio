@@ -3,13 +3,23 @@
   "name": "Rabah-Tech — Software Engineering",
   "icons": [
     {
-      "src": "rabah-logo.png",
+      "src": "favicon-32x32.png",
+      "type": "image/png",
+      "sizes": "32x32"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#1d4ed8",
+  "theme_color": "#1e4a7a",
   "background_color": "#f8fafc"
 }
