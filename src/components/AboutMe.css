@@ -1,116 +1,77 @@
 .about-me {
-  max-width: 1100px;
-  margin: 3rem auto;
-  padding: 3rem 2rem;
+  max-width: 800px;
+  margin: 2.5rem auto;
+  padding: 0 1.25rem;
 }
 
 .about-me-content {
-  display: flex;
-  align-items: center;
-  gap: 3rem;
   background: var(--bg-white);
-  padding: 3rem;
-  border-radius: 20px;
-  box-shadow: var(--shadow-xl);
+  padding: 2.5rem 2rem;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
   border: 1px solid var(--border-color);
 }
 
-.about-me-text {
-  flex: 2;
-}
-
-.about-me-image {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.about-me-image img {
-  width: 100%;
-  max-width: 280px;
-  height: 280px;
-  object-fit: cover;
-  border-radius: 50%;
-  box-shadow: var(--shadow-lg);
-  border: 5px solid var(--primary-light);
-  transition: all 0.3s ease;
-}
-
-.about-me-image img:hover {
-  transform: scale(1.05);
-  box-shadow: var(--shadow-xl);
-}
-
 .about-me h2 {
-  font-size: 2.5rem;
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
   margin-bottom: 1.5rem;
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--text-dark);
   font-weight: 700;
+  letter-spacing: -0.02em;
+  padding-bottom: 0.75rem;
+  border-bottom: 3px solid var(--primary-color);
+  display: inline-block;
 }
 
 .about-me p {
-  font-size: 1.125rem;
+  font-size: 1.05rem;
   line-height: 1.8;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
   color: var(--text-light);
 }
 
 .about-me p:first-of-type {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   color: var(--text-dark);
   font-weight: 500;
 }
 
-.about-me-ar .about-me-text {
+.about-me p:last-child {
+  margin-bottom: 0;
+}
+
+.about-me-ar .about-me-content {
   text-align: right;
 }
 
 .about-me-ar .about-me h2 {
+  display: block;
   text-align: right;
-}
-
-@media (max-width: 968px) {
-  .about-me-content {
-    flex-direction: column-reverse;
-    gap: 2rem;
-    padding: 2rem;
-  }
-
-  .about-me-image {
-    flex: none;
-  }
-
-  .about-me-image img {
-    max-width: 200px;
-    height: 200px;
-  }
-
-  .about-me h2 {
-    font-size: 2rem;
-    text-align: center;
-  }
-
-  .about-me-ar .about-me h2,
-  .about-me-ar .about-me-text {
-    text-align: center;
-  }
 }
 
 @media (max-width: 768px) {
   .about-me {
-    padding: 2rem 1rem;
+    margin: 2rem auto;
+    padding: 0 1rem;
   }
 
   .about-me-content {
-    padding: 1.5rem;
+    padding: 1.75rem 1.25rem;
+    border-radius: var(--radius-lg);
   }
 
   .about-me h2 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
+    display: block;
+    text-align: center;
+  }
+
+  .about-me-ar .about-me h2 {
+    text-align: center;
+  }
+
+  .about-me-ar .about-me-content {
+    text-align: right;
   }
 
   .about-me p {

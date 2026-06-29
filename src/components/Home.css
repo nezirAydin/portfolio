@@ -1,8 +1,8 @@
 .home {
   text-align: center;
-  padding: 4rem 2rem;
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
-  min-height: 60vh;
+  padding: 3rem 1.25rem 2.5rem;
+  background: var(--bg-page);
+  min-height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,10 +10,10 @@
 
 .home-header {
   background: var(--bg-white);
-  padding: 3rem 2rem;
-  border-radius: 20px;
-  box-shadow: var(--shadow-xl);
-  max-width: 900px;
+  padding: 2.5rem 2rem;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  max-width: 880px;
   margin: 0 auto;
   border: 1px solid var(--border-color);
   position: relative;
@@ -21,57 +21,58 @@
 }
 
 .home-header::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: 5px;
+  height: 4px;
   background: var(--gradient-primary);
 }
 
 .home-header h1 {
-  font-size: 3rem;
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  color: var(--primary-dark);
   font-weight: 700;
   margin-bottom: 0.5rem;
   line-height: 1.2;
+  letter-spacing: -0.03em;
 }
 
 .home-subtitle {
-  font-size: 1.35rem;
+  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
   font-weight: 600;
   color: var(--text-dark);
-  margin-bottom: 0.5rem;
-  line-height: 1.4;
+  margin-bottom: 0.75rem;
+  line-height: 1.45;
 }
 
-.home-header p {
-  font-size: 1.25rem;
-  margin-top: 1rem;
+.home-header > p:not(.home-subtitle) {
+  font-size: 1.05rem;
+  margin-top: 0.5rem;
   color: var(--text-light);
-  line-height: 1.6;
+  line-height: 1.75;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .home-highlights {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
-  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.875rem;
+  margin-top: 1.75rem;
   text-align: left;
 }
 
 .home-highlight {
   background: var(--bg-light);
   border: 1px solid var(--border-color);
-  border-radius: 14px;
+  border-radius: var(--radius-md);
   padding: 1rem 1.1rem;
   color: var(--text-dark);
-  line-height: 1.6;
-  box-shadow: var(--shadow-sm);
+  font-size: 0.95rem;
+  line-height: 1.65;
 }
 
 .home-ar .home-header,
@@ -85,28 +86,21 @@
 
 @media (max-width: 768px) {
   .home {
-    padding: 2rem 1rem;
-    min-height: 50vh;
+    padding: 1.5rem 1rem 2rem;
   }
 
   .home-header {
-    padding: 2rem 1.5rem;
-  }
-
-  .home-header h1 {
-    font-size: 2rem;
-  }
-
-  .home-header p {
-    font-size: 1rem;
+    padding: 1.75rem 1.25rem;
+    border-radius: var(--radius-lg);
   }
 
   .home-highlights {
     grid-template-columns: 1fr;
-    text-align: left;
+    gap: 0.75rem;
   }
 
-  .home-ar .home-highlights {
-    text-align: right;
+  .home-highlight {
+    font-size: 0.9rem;
+    padding: 0.875rem 1rem;
   }
 }

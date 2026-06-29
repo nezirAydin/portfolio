@@ -1,4 +1,5 @@
-export const GA_MEASUREMENT_ID = process.env.REACT_APP_GA_MEASUREMENT_ID;
+export const GA_MEASUREMENT_ID =
+  process.env.REACT_APP_GA_MEASUREMENT_ID || "G-QZJDPMV5LS";
 
 let initialized = false;
 
