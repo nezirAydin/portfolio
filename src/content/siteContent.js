@@ -10,6 +10,7 @@ const siteContent = {
       experience: "Solutions",
       projects: "Projects",
       partner: "IUTech",
+      partnerBothbs: "BothBS",
       contact: "Contact Us",
       toggle: "العربية",
     },
@@ -19,6 +20,7 @@ const siteContent = {
       description:
         "We design and deliver high-performance software — from AI-powered platforms and enterprise systems to polished web and mobile products. Rabah-Tech partners with companies that need reliable engineering, fast execution, and solutions built to scale.",
       highlights: [
+        "Official agent of BothBS healthcare & business solutions in Syria.",
         "Official representative of IUTech (Innovation Universe) IoT solutions in Syria.",
         "Full-stack product delivery — strategy, design, development, and deployment.",
         "Deep expertise in AI infrastructure, Linux systems, IoT, and high-throughput backends.",
@@ -29,6 +31,7 @@ const siteContent = {
       imageAlt: "Rabah-Tech",
       paragraphs: [
         "Rabah-Tech is a software engineering company focused on building products that solve real business problems. We combine systems-level engineering with modern full-stack development to deliver solutions that are fast, secure, and ready for production.",
+        "We are the authorized agent of Beat of the Heart for Business Solutions (BothBS) in Syria — delivering next-generation healthcare IT, digital health systems, strategic consulting, and institutional capacity building across the region.",
         "We are the authorized representative of Innovation Universe for Information Technology (IUTech) in Syria — bringing world-class IoT devices, smart monitoring systems, and Industry 4.0 solutions from Saudi Arabia to businesses across the Syrian market.",
         "We believe great software is built through clarity, craftsmanship, and close collaboration with our clients. From smart IoT deployments to enterprise platforms, Rabah-Tech delivers engineering you can trust.",
       ],
@@ -129,6 +132,39 @@ const siteContent = {
           ],
         },
         {
+          company: "BothBS — Digital Health Systems",
+          role: "Next-gen healthcare IT delivered in Syria by Rabah-Tech",
+          duration: "EMR · EHR · Patient tracking · Analytics",
+          location: "Hospitals, Clinics, Health networks",
+          description: [
+            "Authorized BothBS agent: design and development of digital health platforms that improve service quality and operational efficiency.",
+            "EMR and EHR digital transformation with patient and supply tracking systems integrated into hospital workflows.",
+            "Health analytics dashboards and data-driven decision tools for clinical and administrative leadership.",
+          ],
+        },
+        {
+          company: "BothBS — Healthcare Consulting & Emergency Response",
+          role: "Expert advisory and crisis-ready medical coordination",
+          duration: "Consulting · Emergency · Capacity building",
+          location: "NGOs, Humanitarian, Underserved areas",
+          description: [
+            "Emergency medical project coordination — rapid response, field logistics, and implementation in high-risk environments.",
+            "Specialized health consultations: informatics strategy, system optimization, and interoperability standards.",
+            "Capacity building for medical teams — competency-based training for hospitals, NGOs, and healthcare professionals.",
+          ],
+        },
+        {
+          company: "BothBS — Strategy, Projects & Institutional Growth",
+          role: "Business solutions that strengthen healthcare organizations",
+          duration: "PMI · Strategy · CSR · Digital transformation",
+          location: "Private sector, Non-profits, Institutions",
+          description: [
+            "Strategic consulting — operational planning, organizational structure, and governance for healthcare and business institutions.",
+            "Project management to international PMI standards with full lifecycle delivery and quality assurance.",
+            "CSR program design, digital transformation, and technology solutions delivered locally through Rabah-Tech as BothBS agent in Syria.",
+          ],
+        },
+        {
           company: "Enterprise Platforms",
           role: "Operations software that runs your business",
           duration: "ERP · Inventory · KPIs · Workflows",
@@ -224,6 +260,14 @@ const siteContent = {
           liveLink: "https://nazero3.github.io/sweet-shop/",
         },
         {
+          name: "Sakan Agency",
+          description:
+            "A luxury real estate platform for Sakan Agency — curated property listings, investment consulting, property management services, and a bilingual Arabic-first client journey from first inquiry through to handover.",
+          type: "Real Estate Platform",
+          featured: true,
+          websiteLink: "https://demo.sakan.agency/",
+        },
+        {
           name: "EU4Less",
           description:
             "A commercial mobile application showcasing end-to-end product delivery — app experience, service integration, and scalable backend architecture.",
@@ -287,6 +331,7 @@ const siteContent = {
       ],
     },
     partner: {
+      detailPath: "/iutech",
       pageTitle: "Official IUTech Representative — Syria",
       badge: "Authorized Partner",
       companyName: "Innovation Universe for Information Technology (IUTech)",
@@ -370,6 +415,92 @@ const siteContent = {
       ctaText:
         "Need IUTech IoT solutions in Syria? Rabah-Tech provides sales, integration, and local support as the official representative. Visit IUTech's global site or contact us directly.",
     },
+    bothbs: {
+      detailPath: "/bothbs",
+      themeClass: "healthcare",
+      pageTitle: "Official BothBS Agent — Syria",
+      badge: "Authorized Agent",
+      companyName: "Beat of the Heart for Business Solutions (BothBS)",
+      website: "https://www.bothbs.com",
+      websiteLabel: "Visit BothBS",
+      learnMoreLabel: "View all health solutions",
+      contactLabel: "Contact us in Syria",
+      paragraphs: [
+        "Rabah-Tech is the authorized agent of Beat of the Heart for Business Solutions (BothBS) in Syria. We connect healthcare institutions, NGOs, and private-sector organizations with next-generation health IT, digital transformation, and strategic business solutions.",
+        "BothBS specializes in integrated solutions for the private sector and non-profits — from emergency medical coordination and EMR/EHR systems to project management, capacity building, and CSR program design. Through Rabah-Tech, Syrian clients get local representation, consultation, and delivery backed by BothBS expertise.",
+      ],
+      pillars: [
+        {
+          title: "Core Health Initiatives",
+          description:
+            "Driving critical healthcare projects with focus and precision — emergency response, field coordination, and medical logistics in complex environments.",
+        },
+        {
+          title: "Smart HealthTech",
+          description:
+            "Innovative health IT and digital platforms including EMR/EHR, patient tracking, supply systems, and health analytics dashboards.",
+        },
+        {
+          title: "Strengthening Institutions",
+          description:
+            "Empowering hospitals, NGOs, and healthcare organizations through consulting, training, governance, and sustainable operational outcomes.",
+        },
+      ],
+      productsTitle: "BothBS Services & Solutions",
+      products: [
+        {
+          name: "Emergency Medical Project Coordination",
+          description:
+            "Rapid emergency response, medical logistics, and field coordination in high-risk and underserved areas.",
+        },
+        {
+          name: "Digital Health Systems (EMR & EHR)",
+          description:
+            "Advanced digital health platforms — patient records, supply tracking, and analytics dashboards for hospitals and clinics.",
+        },
+        {
+          name: "Specialized Health Consultations",
+          description:
+            "Health informatics strategy, system optimization, and interoperability guidance for digital health readiness.",
+        },
+        {
+          name: "Capacity Building for Medical Teams",
+          description:
+            "Competency-based training programs for clinical, administrative, and leadership skills in hospitals and NGOs.",
+        },
+        {
+          name: "Strategic Consulting",
+          description:
+            "Strategic and operational planning, organizational structure, and governance systems for healthcare institutions.",
+        },
+        {
+          name: "Project Management (PMI Standards)",
+          description:
+            "Full lifecycle project delivery — time-bound, budget-aligned, with quality assurance at every phase.",
+        },
+        {
+          name: "Digital Solutions & Technology Transformation",
+          description:
+            "Websites, platforms, administrative systems, workflow automation, and monitoring & evaluation tools.",
+        },
+        {
+          name: "CSR Program Design & Management",
+          description:
+            "Design, implementation, and impact measurement of corporate social responsibility programs for community development.",
+        },
+      ],
+      industriesTitle: "Sectors we serve in Syria",
+      industries: [
+        "Hospitals & clinics",
+        "NGOs & humanitarian",
+        "Private healthcare",
+        "Government health",
+        "Medical education",
+        "Corporate CSR",
+      ],
+      ctaText:
+        "Need BothBS healthcare and business solutions in Syria? Rabah-Tech acts as your local agent for consultation, project delivery, and ongoing support. Visit BothBS or contact us directly.",
+    },
     contact: {
       pageTitle: "Contact Us",
       subtitle:
@@ -395,6 +526,7 @@ const siteContent = {
       experience: "الحلول",
       projects: "المشاريع",
       partner: "IUTech",
+      partnerBothbs: "BothBS",
       contact: "تواصل معنا",
       toggle: "English",
     },
@@ -404,6 +536,7 @@ const siteContent = {
       description:
         "نصمم ونطور برمجيات عالية الأداء — من منصات الذكاء الاصطناعي والأنظمة المؤسسية إلى منتجات ويب وجوال احترافية. تتعاون Rabah-Tech مع الشركات التي تحتاج هندسة موثوقة وتنفيذاً سريعاً وحلولاً قابلة للتوسع.",
       highlights: [
+        "الممثل الرسمي لحلول BothBS الصحية والإدارية في سوريا.",
         "الممثل الرسمي لحلول IUTech (عالم الابتكار) لإنترنت الأشياء في سوريا.",
         "تسليم منتجات متكاملة — من الاستراتيجية والتصميم إلى التطوير والنشر.",
         "خبرة عميقة في بنية الذكاء الاصطناعي وأنظمة لينكس وإنترنت الأشياء والخدمات الخلفية عالية الأداء.",
@@ -414,6 +547,7 @@ const siteContent = {
       imageAlt: "Rabah-Tech",
       paragraphs: [
         "Rabah-Tech شركة هندسة برمجيات تركز على بناء منتجات تحل مشكلات أعمال حقيقية. نجمع بين الهندسة على مستوى الأنظمة والتطوير المتكامل الحديث لتقديم حلول سريعة وآمنة وجاهزة للإنتاج.",
+        "نحن الوكيل المعتمد لشركة Beat of the Heart for Business Solutions (BothBS) في سوريا — نقدم تقنية صحية من الجيل الجديد وأنظمة الصحة الرقمية والاستشارات الاستراتيجية وبناء القدرات المؤسسية في المنطقة.",
         "نحن الممثل المعتمد لشركة عالم الابتكار لتقنية المعلومات (IUTech) في سوريا — نقدم أجهزة إنترنت الأشياء وأنظمة المراقبة الذكية وحلول الصناعة 4.0 من السعودية إلى الشركات في السوق السوري.",
         "نؤمن أن البرمجيات العظيمة تُبنى بالوضوح والإتقان والتعاون الوثيق مع عملائنا. من نشر إنترنت الأشياء الذكي إلى المنصات المؤسسية، تقدم Rabah-Tech هندسة يمكنك الوثوق بها.",
       ],
@@ -514,6 +648,39 @@ const siteContent = {
           ],
         },
         {
+          company: "BothBS — أنظمة الصحة الرقمية",
+          role: "تقنية صحية من الجيل الجديد تُقدَّم في سوريا عبر Rabah-Tech",
+          duration: "EMR · EHR · تتبع المرضى · التحليلات",
+          location: "المستشفيات، العيادات، الشبكات الصحية",
+          description: [
+            "وكيل BothBS المعتمد: تصميم وتطوير منصات صحية رقمية تحسّن جودة الخدمة والكفاءة التشغيلية.",
+            "تحول رقمي لـ EMR وEHR مع أنظمة تتبع المرضى والإمدادات مدمجة في سير عمل المستشفيات.",
+            "لوحات تحليلات صحية وأدوات قرار قائمة على البيانات للقيادة السريرية والإدارية.",
+          ],
+        },
+        {
+          company: "BothBS — الاستشارات الصحية والطوارئ",
+          role: "استشارات متخصصة وتنسيق طبي جاهز للأزمات",
+          duration: "استشارات · طوارئ · بناء قدرات",
+          location: "المنظمات غير الربحية، الإنسانية، المناطق المحرومة",
+          description: [
+            "تنسيق مشاريع طوارئ طبية — استجابة سريعة ولوجستيات ميدانية وتنفيذ في بيئات عالية المخاطر.",
+            "استشارات صحية متخصصة: استراتيجية المعلوماتية الصحية وتحسين الأنظمة ومعايير التشغيل البيني.",
+            "بناء قدرات الفرق الطبية — تدريب قائم على الكفاءات للمستشفيات والمنظمات غير الربحية والعاملين الصحيين.",
+          ],
+        },
+        {
+          company: "BothBS — الاستراتيجية والمشاريع والنمو المؤسسي",
+          role: "حلول أعمال تعزز المؤسسات الصحية",
+          duration: "PMI · استراتيجية · CSR · تحول رقمي",
+          location: "القطاع الخاص، المنظمات غير الربحية، المؤسسات",
+          description: [
+            "استشارات استراتيجية — تخطيط تشغيلي وهيكلة تنظيمية وحوكمة للمؤسسات الصحية والأعمال.",
+            "إدارة مشاريع وفق معايير PMI الدولية مع تسليم دورة حياة كاملة وضمان الجودة.",
+            "تصميم برامج CSR والتحول الرقمي والحلول التقنية محلياً عبر Rabah-Tech كوكيل BothBS في سوريا.",
+          ],
+        },
+        {
           company: "المنصات المؤسسية",
           role: "برمجيات تشغيل تدير أعمالك",
           duration: "ERP · المخزون · مؤشرات الأداء · سير العمل",
@@ -609,6 +776,14 @@ const siteContent = {
           liveLink: "https://nazero3.github.io/sweet-shop/",
         },
         {
+          name: "Sakan Agency",
+          description:
+            "منصة عقارية فاخرة لوكالة سكن — قوائم عقارات منتقاة، استشارات استثمارية، خدمات إدارة عقارات، وتجربة عملاء عربية ثنائية اللغة من أول استفسار حتى التسليم.",
+          type: "منصة عقارية",
+          featured: true,
+          websiteLink: "https://demo.sakan.agency/",
+        },
+        {
           name: "EU4Less",
           description:
             "تطبيق جوال تجاري يعرض التسليم المتكامل — تجربة التطبيق وتكامل الخدمات وبنية خلفية قابلة للتوسع.",
@@ -672,6 +847,7 @@ const siteContent = {
       ],
     },
     partner: {
+      detailPath: "/iutech",
       pageTitle: "الممثل الرسمي لـ IUTech في سوريا",
       badge: "شريك معتمد",
       companyName: "Innovation Universe for Information Technology (IUTech)",
@@ -754,6 +930,92 @@ const siteContent = {
       ],
       ctaText:
         "تحتاج حلول IUTech للإنترنت of Things في سوريا؟ توفر Rabah-Tech المبيعات والتكامل والدعم المحلي كممثل رسمي. زر موقع IUTech أو تواصل معنا مباشرة.",
+    },
+    bothbs: {
+      detailPath: "/bothbs",
+      themeClass: "healthcare",
+      pageTitle: "الوكيل الرسمي لـ BothBS في سوريا",
+      badge: "وكيل معتمد",
+      companyName: "Beat of the Heart for Business Solutions (BothBS)",
+      website: "https://www.bothbs.com",
+      websiteLabel: "زيارة موقع BothBS",
+      learnMoreLabel: "عرض جميع الحلول الصحية",
+      contactLabel: "تواصل معنا في سوريا",
+      paragraphs: [
+        "Rabah-Tech هي الوكيل المعتمد لشركة Beat of the Heart for Business Solutions (BothBS) في سوريا. نربط المؤسسات الصحية والمنظمات غير الربحية والقطاع الخاص بتقنية صحية من الجيل الجديد والتحول الرقمي والحلول الإدارية الاستراتيجية.",
+        "تتخصص BothBS في حلول متكاملة للقطاع الخاص والمنظمات غير الربحية — من تنسيق الطوارئ الطبية وأنظمة EMR/EHR إلى إدارة المشاريع وبناء القدرات وتصميم برامج المسؤولية الاجتماعية. عبر Rabah-Tech يحصل العملاء السوريون على تمثيل محلي واستشارة وتسليم مدعوم بخبرة BothBS.",
+      ],
+      pillars: [
+        {
+          title: "مبادرات صحية أساسية",
+          description:
+            "قيادة مشاريع رعاية صحية حرجة بدقة وتركيز — استجابة طارئة وتنسيق ميداني ولوجستيات طبية في بيئات معقدة.",
+        },
+        {
+          title: "تقنية صحية ذكية",
+          description:
+            "تقنية معلومات صحية ومنصات رقمية مبتكرة تشمل EMR/EHR وتتبع المرضى وأنظمة الإمداد ولوحات تحليلات صحية.",
+        },
+        {
+          title: "تعزيز المؤسسات",
+          description:
+            "تمكين المستشفيات والمنظمات غير الربحية والمؤسسات الصحية عبر الاستشارات والتدريب والحوكمة ونتائج تشغيلية مستدامة.",
+        },
+      ],
+      productsTitle: "خدمات وحلول BothBS",
+      products: [
+        {
+          name: "تنسيق مشاريع الطوارئ الطبية",
+          description:
+            "استجابة طارئة سريعة ولوجستيات طبية وتنسيق ميداني في المناطق عالية المخاطر وغير المخدومة.",
+        },
+        {
+          name: "أنظمة الصحة الرقمية (EMR وEHR)",
+          description:
+            "منصات صحية رقمية متقدمة — سجلات المرضى وتتبع الإمدادات ولوحات تحليلات للمستشفيات والعيادات.",
+        },
+        {
+          name: "استشارات صحية متخصصة",
+          description:
+            "استراتيجية المعلوماتية الصحية وتحسين الأنظمة وإرشاد التشغيل البيني للجاهزية الرقمية.",
+        },
+        {
+          name: "بناء قدرات الفرق الطبية",
+          description:
+            "برامج تدريب قائمة على الكفاءات للمهارات السريرية والإدارية والقيادية في المستشفيات والمنظمات غير الربحية.",
+        },
+        {
+          name: "الاستشارات الاستراتيجية",
+          description:
+            "تخطيط استراتيجي وتشغيلي وهيكلة تنظيمية وأنظمة حوكمة للمؤسسات الصحية.",
+        },
+        {
+          name: "إدارة المشاريع (معايير PMI)",
+          description:
+            "تسليم مشاريع بدورة حياة كاملة — ضمن الوقت والميزانية مع ضمان الجودة في كل مرحلة.",
+        },
+        {
+          name: "الحلول الرقمية والتحول التقني",
+          description:
+            "مواقع ومنصات وأنظمة إدارية وأتمتة سير العمل وأدوات المراقبة والتقييم.",
+        },
+        {
+          name: "تصميم وإدارة برامج المسؤولية الاجتماعية",
+          description:
+            "تصميم وتنفيذ وقياس أثر برامج CSR للمساهمة في تنمية المجتمع.",
+        },
+      ],
+      industriesTitle: "القطاعات التي نخدمها في سوريا",
+      industries: [
+        "المستشفيات والعيادات",
+        "المنظمات غير الربحية والإنسانية",
+        "الرعاية الصحية الخاصة",
+        "الصحة الحكومية",
+        "التعليم الطبي",
+        "المسؤولية الاجتماعية للشركات",
+      ],
+      ctaText:
+        "تحتاج حلول BothBS الصحية والإدارية في سوريا؟ تعمل Rabah-Tech كوكيل محلي للاستشارة وتسليم المشاريع والدعم المستمر. زر موقع BothBS أو تواصل معنا مباشرة.",
     },
     contact: {
       pageTitle: "تواصل معنا",

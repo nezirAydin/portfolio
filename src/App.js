@@ -9,7 +9,8 @@ import Projects from "./components/Projects";
 import ContactMe from "./components/ContactMe";
 import Skills from "./components/Skills";
 import WhatsAppButton from "./components/WhatsAppButton";
-import IUTechPartner from "./components/IUTechPartner";
+import PartnerSection from "./components/PartnerSection";
+import PageViewTracker from "./components/PageViewTracker";
 import siteContent from "./content/siteContent";
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
 
   return (
     <Router>
+      <PageViewTracker pageTitle={content.meta.title} />
       <div className={`App app-shell ${isArabic ? "rtl" : "ltr"}`}>
         <nav className="navigation">
           <Link to="/" className="nav-brand">
@@ -42,6 +44,7 @@ function App() {
             <Link to="/experience">{content.nav.experience}</Link>
             <Link to="/projects">{content.nav.projects}</Link>
             <Link to="/iutech">{content.nav.partner}</Link>
+            <Link to="/bothbs">{content.nav.partnerBothbs}</Link>
             <Link to="/contact">{content.nav.contact}</Link>
           </div>
           <button
@@ -59,7 +62,8 @@ function App() {
               <motion.div {...pageTransition}>
                 <Home content={content.home} isArabic={isArabic} />
                 <AboutMe content={content.aboutMe} isArabic={isArabic} />
-                <IUTechPartner content={content.partner} isArabic={isArabic} isHomepage />
+                <PartnerSection content={content.partner} isArabic={isArabic} isHomepage />
+                <PartnerSection content={content.bothbs} isArabic={isArabic} isHomepage />
                 <Projects content={content.projects} isHomepage isArabic={isArabic} />
               </motion.div>
             }
@@ -92,7 +96,15 @@ function App() {
             path="/iutech"
             element={
               <motion.div {...pageTransition}>
-                <IUTechPartner content={content.partner} isArabic={isArabic} />
+                <PartnerSection content={content.partner} isArabic={isArabic} />
+              </motion.div>
+            }
+          />
+          <Route
+            path="/bothbs"
+            element={
+              <motion.div {...pageTransition}>
+                <PartnerSection content={content.bothbs} isArabic={isArabic} />
               </motion.div>
             }
           />
