@@ -30,6 +30,14 @@
   background: var(--gradient-primary);
 }
 
+.home-logo {
+  display: block;
+  width: min(100%, 320px);
+  height: auto;
+  margin: 0 auto 1.25rem;
+  object-fit: contain;
+}
+
 .home-header h1 {
   font-size: clamp(2rem, 5vw, 2.75rem);
   color: var(--primary-dark);
@@ -92,6 +100,11 @@
   .home-header {
     padding: 1.75rem 1.25rem;
     border-radius: var(--radius-lg);
+  }
+
+  .home-logo {
+    width: min(100%, 260px);
+    margin-bottom: 1rem;
   }
 
   .home-highlights {

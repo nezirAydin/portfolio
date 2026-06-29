@@ -28,6 +28,10 @@
   background: var(--gradient-secondary);
 }
 
+.partner-hvac .partner-section-inner::before {
+  background: linear-gradient(90deg, #475569 0%, #1e4a7a 50%, #2563eb 100%);
+}
+
 .partner-badge {
   display: inline-block;
   background: var(--primary-color);
@@ -43,6 +47,10 @@
 
 .partner-healthcare .partner-badge {
   background: var(--secondary-color);
+}
+
+.partner-hvac .partner-badge {
+  background: #1e4a7a;
 }
 
 .partner-section-header h2 {
@@ -62,6 +70,10 @@
 
 .partner-healthcare .partner-company-name {
   color: var(--secondary-color);
+}
+
+.partner-hvac .partner-company-name {
+  color: #1e4a7a;
 }
 
 .partner-section-intro p {
@@ -100,6 +112,10 @@
 
 .partner-healthcare .partner-pillar-number {
   color: var(--secondary-color);
+}
+
+.partner-hvac .partner-pillar-number {
+  color: #1e4a7a;
 }
 
 .partner-pillar h3 {
@@ -179,6 +195,12 @@
   border-color: rgba(13, 148, 136, 0.2);
 }
 
+.partner-hvac .partner-industries li {
+  background: rgba(30, 74, 122, 0.08);
+  color: #1e4a7a;
+  border-color: rgba(30, 74, 122, 0.2);
+}
+
 .partner-cta {
   background: var(--primary-subtle);
   border: 1px solid rgba(37, 99, 235, 0.12);
@@ -190,6 +212,11 @@
 .partner-healthcare .partner-cta {
   background: var(--secondary-subtle);
   border-color: rgba(13, 148, 136, 0.15);
+}
+
+.partner-hvac .partner-cta {
+  background: rgba(30, 74, 122, 0.06);
+  border-color: rgba(30, 74, 122, 0.15);
 }
 
 .partner-cta-text {
@@ -229,6 +256,10 @@
   background: var(--secondary-color);
 }
 
+.partner-hvac .partner-btn-primary {
+  background: #1e4a7a;
+}
+
 .partner-btn-primary:hover {
   opacity: 0.9;
   transform: translateY(-1px);
@@ -245,6 +276,11 @@
   border-color: #5eead4;
 }
 
+.partner-hvac .partner-btn-secondary {
+  color: #1e4a7a;
+  border-color: #93c5fd;
+}
+
 .partner-btn-secondary:hover {
   background: var(--primary-color);
   color: white;
@@ -252,6 +288,11 @@
 
 .partner-healthcare .partner-btn-secondary:hover {
   background: #0d9488;
+  color: white;
+}
+
+.partner-hvac .partner-btn-secondary:hover {
+  background: #1e4a7a;
   color: white;
 }
 

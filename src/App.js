@@ -45,6 +45,7 @@ function App() {
             <Link to="/projects">{content.nav.projects}</Link>
             <Link to="/iutech">{content.nav.partner}</Link>
             <Link to="/bothbs">{content.nav.partnerBothbs}</Link>
+            <Link to="/hvac">{content.nav.partnerHvac}</Link>
             <Link to="/contact">{content.nav.contact}</Link>
           </div>
           <button
@@ -64,6 +65,7 @@ function App() {
                 <AboutMe content={content.aboutMe} isArabic={isArabic} />
                 <PartnerSection content={content.partner} isArabic={isArabic} isHomepage />
                 <PartnerSection content={content.bothbs} isArabic={isArabic} isHomepage />
+                <PartnerSection content={content.rabahCo} isArabic={isArabic} isHomepage />
                 <Projects content={content.projects} isHomepage isArabic={isArabic} />
               </motion.div>
             }
@@ -105,6 +107,14 @@ function App() {
             element={
               <motion.div {...pageTransition}>
                 <PartnerSection content={content.bothbs} isArabic={isArabic} />
+              </motion.div>
+            }
+          />
+          <Route
+            path="/hvac"
+            element={
+              <motion.div {...pageTransition}>
+                <PartnerSection content={content.rabahCo} isArabic={isArabic} />
               </motion.div>
             }
           />

@@ -11,6 +11,7 @@ const siteContent = {
       projects: "Projects",
       partner: "IUTech",
       partnerBothbs: "BothBS",
+      partnerHvac: "HVAC",
       contact: "Contact Us",
       toggle: "العربية",
     },
@@ -20,10 +21,10 @@ const siteContent = {
       description:
         "We design and deliver high-performance software — from AI-powered platforms and enterprise systems to polished web and mobile products. Rabah-Tech partners with companies that need reliable engineering, fast execution, and solutions built to scale.",
       highlights: [
+        "Official S&P (Soler & Palau) ventilation agent in Syria via Rabah Ventilation Systems.",
         "Official agent of BothBS healthcare & business solutions in Syria.",
         "Official representative of IUTech (Innovation Universe) IoT solutions in Syria.",
         "Full-stack product delivery — strategy, design, development, and deployment.",
-        "Deep expertise in AI infrastructure, Linux systems, IoT, and high-throughput backends.",
       ],
     },
     aboutMe: {
@@ -31,6 +32,7 @@ const siteContent = {
       imageAlt: "Rabah-Tech",
       paragraphs: [
         "Rabah-Tech is a software engineering company focused on building products that solve real business problems. We combine systems-level engineering with modern full-stack development to deliver solutions that are fast, secure, and ready for production.",
+        "We are the official S&P (Soler & Palau) agent in Syria through Rabah Ventilation Systems — supplying certified ventilation, air-conditioning, and HVAC solutions for industrial, commercial, and residential projects.",
         "We are the authorized agent of Beat of the Heart for Business Solutions (BothBS) in Syria — delivering next-generation healthcare IT, digital health systems, strategic consulting, and institutional capacity building across the region.",
         "We are the authorized representative of Innovation Universe for Information Technology (IUTech) in Syria — bringing world-class IoT devices, smart monitoring systems, and Industry 4.0 solutions from Saudi Arabia to businesses across the Syrian market.",
         "We believe great software is built through clarity, craftsmanship, and close collaboration with our clients. From smart IoT deployments to enterprise platforms, Rabah-Tech delivers engineering you can trust.",
@@ -162,6 +164,28 @@ const siteContent = {
             "Strategic consulting — operational planning, organizational structure, and governance for healthcare and business institutions.",
             "Project management to international PMI standards with full lifecycle delivery and quality assurance.",
             "CSR program design, digital transformation, and technology solutions delivered locally through Rabah-Tech as BothBS agent in Syria.",
+          ],
+        },
+        {
+          company: "Rabah Co — S&P Ventilation & HVAC",
+          role: "Official Soler & Palau agent in Syria",
+          duration: "Ventilation · Air conditioning · Certified supply",
+          location: "Industrial, Commercial, Residential",
+          description: [
+            "Official S&P (Soler & Palau) agent: original fans, air handling units, and ventilation systems for factories, offices, and homes.",
+            "Consulting and engineering design for smart ventilation and climate-control projects — from specification to installation support.",
+            "Export, logistics, and after-sales support through Rabah Ventilation Systems at rabah-co.com.",
+          ],
+        },
+        {
+          company: "Rabah Co — Industrial & Commercial Air Systems",
+          role: "Engineered airflow for demanding environments",
+          duration: "Extraction · Ducting · Energy recovery",
+          location: "Manufacturing, Retail, Hospitality",
+          description: [
+            "Industrial extraction and smoke-control ventilation for workshops, kitchens, and production facilities.",
+            "Commercial air-conditioning integration with S&P-certified equipment for offices, hotels, and retail spaces.",
+            "Full project support in Syria: product selection, technical documentation, and local representation via Rabah-Tech.",
           ],
         },
         {
@@ -501,6 +525,82 @@ const siteContent = {
       ctaText:
         "Need BothBS healthcare and business solutions in Syria? Rabah-Tech acts as your local agent for consultation, project delivery, and ongoing support. Visit BothBS or contact us directly.",
     },
+    rabahCo: {
+      detailPath: "/hvac",
+      themeClass: "hvac",
+      pageTitle: "Official S&P Agent — Syria",
+      badge: "Official Agent",
+      companyName: "Rabah Ventilation Systems (Rabah Co)",
+      website: "https://rabah-co.com/",
+      websiteLabel: "Visit rabah-co.com",
+      learnMoreLabel: "View all HVAC solutions",
+      contactLabel: "Contact us in Syria",
+      paragraphs: [
+        "Rabah-Tech is the official Soler & Palau (S&P) agent in Syria through Rabah Ventilation Systems. We connect industrial, commercial, and residential clients with world-class ventilation and air-conditioning solutions — from consulting and system design to certified product supply and project support.",
+        "S&P is a global leader in ventilation technology. Through Rabah Co, Syrian businesses and homeowners access original S&P fans, air handling equipment, and smart climate solutions backed by local expertise, logistics, and after-sales service.",
+      ],
+      pillars: [
+        {
+          title: "Consulting & Design",
+          description:
+            "Engineering consultation and ventilation system design tailored to your building, production line, or residential project.",
+        },
+        {
+          title: "Certified S&P Supply",
+          description:
+            "Genuine Soler & Palau products — fans, extractors, air handling units, and accessories with full technical documentation.",
+        },
+        {
+          title: "Logistics & Project Support",
+          description:
+            "Export coordination, delivery, installation guidance, and ongoing support for HVAC projects across Syria.",
+        },
+      ],
+      productsTitle: "HVAC Services & Solutions",
+      products: [
+        {
+          name: "Industrial Ventilation & Extraction",
+          description:
+            "Heavy-duty fans and extraction systems for factories, workshops, and production environments.",
+        },
+        {
+          name: "Commercial Air Conditioning",
+          description:
+            "S&P-certified equipment for offices, retail, hotels, and public buildings — efficient climate control at scale.",
+        },
+        {
+          name: "Residential Ventilation",
+          description:
+            "Quiet, energy-efficient ventilation and air-quality solutions for homes and apartments.",
+        },
+        {
+          name: "Smoke Control & Safety Ventilation",
+          description:
+            "Engineered smoke extraction and emergency ventilation for compliance and occupant safety.",
+        },
+        {
+          name: "Air Handling & Duct Systems",
+          description:
+            "Complete air handling units, duct fans, and distribution components for integrated HVAC projects.",
+        },
+        {
+          name: "Technical Consulting",
+          description:
+            "Specification support, load calculations, and system sizing from certified ventilation specialists.",
+        },
+      ],
+      industriesTitle: "Sectors we serve in Syria",
+      industries: [
+        "Manufacturing & industrial",
+        "Commercial buildings",
+        "Hospitality & restaurants",
+        "Healthcare facilities",
+        "Residential developments",
+        "Retail & shopping centers",
+      ],
+      ctaText:
+        "Need S&P ventilation or HVAC solutions in Syria? Rabah-Tech and Rabah Ventilation Systems provide official representation, certified products, and local project support. Visit rabah-co.com or contact us directly.",
+    },
     contact: {
       pageTitle: "Contact Us",
       subtitle:
@@ -527,6 +627,7 @@ const siteContent = {
       projects: "المشاريع",
       partner: "IUTech",
       partnerBothbs: "BothBS",
+      partnerHvac: "التكييف",
       contact: "تواصل معنا",
       toggle: "English",
     },
@@ -536,10 +637,10 @@ const siteContent = {
       description:
         "نصمم ونطور برمجيات عالية الأداء — من منصات الذكاء الاصطناعي والأنظمة المؤسسية إلى منتجات ويب وجوال احترافية. تتعاون Rabah-Tech مع الشركات التي تحتاج هندسة موثوقة وتنفيذاً سريعاً وحلولاً قابلة للتوسع.",
       highlights: [
+        "الوكيل الرسمي لـ S&P (Soler & Palau) للتهوية في سوريا عبر شركة رباح للأنظمة التهوية.",
         "الممثل الرسمي لحلول BothBS الصحية والإدارية في سوريا.",
         "الممثل الرسمي لحلول IUTech (عالم الابتكار) لإنترنت الأشياء في سوريا.",
         "تسليم منتجات متكاملة — من الاستراتيجية والتصميم إلى التطوير والنشر.",
-        "خبرة عميقة في بنية الذكاء الاصطناعي وأنظمة لينكس وإنترنت الأشياء والخدمات الخلفية عالية الأداء.",
       ],
     },
     aboutMe: {
@@ -547,6 +648,7 @@ const siteContent = {
       imageAlt: "Rabah-Tech",
       paragraphs: [
         "Rabah-Tech شركة هندسة برمجيات تركز على بناء منتجات تحل مشكلات أعمال حقيقية. نجمع بين الهندسة على مستوى الأنظمة والتطوير المتكامل الحديث لتقديم حلول سريعة وآمنة وجاهزة للإنتاج.",
+        "نحن الوكيل الرسمي لـ S&P (Soler & Palau) في سوريا عبر شركة رباح للأنظمة التهوية — نوفر حلول تهوية وتكييف معتمدة للمشاريع الصناعية والتجارية والسكنية.",
         "نحن الوكيل المعتمد لشركة Beat of the Heart for Business Solutions (BothBS) في سوريا — نقدم تقنية صحية من الجيل الجديد وأنظمة الصحة الرقمية والاستشارات الاستراتيجية وبناء القدرات المؤسسية في المنطقة.",
         "نحن الممثل المعتمد لشركة عالم الابتكار لتقنية المعلومات (IUTech) في سوريا — نقدم أجهزة إنترنت الأشياء وأنظمة المراقبة الذكية وحلول الصناعة 4.0 من السعودية إلى الشركات في السوق السوري.",
         "نؤمن أن البرمجيات العظيمة تُبنى بالوضوح والإتقان والتعاون الوثيق مع عملائنا. من نشر إنترنت الأشياء الذكي إلى المنصات المؤسسية، تقدم Rabah-Tech هندسة يمكنك الوثوق بها.",
@@ -678,6 +780,28 @@ const siteContent = {
             "استشارات استراتيجية — تخطيط تشغيلي وهيكلة تنظيمية وحوكمة للمؤسسات الصحية والأعمال.",
             "إدارة مشاريع وفق معايير PMI الدولية مع تسليم دورة حياة كاملة وضمان الجودة.",
             "تصميم برامج CSR والتحول الرقمي والحلول التقنية محلياً عبر Rabah-Tech كوكيل BothBS في سوريا.",
+          ],
+        },
+        {
+          company: "رباح — تهوية S&P والتكييف",
+          role: "الوكيل الرسمي لـ Soler & Palau في سوريا",
+          duration: "تهوية · تكييف · توريد معتمد",
+          location: "صناعي، تجاري، سكني",
+          description: [
+            "الوكيل الرسمي لـ S&P (Soler & Palau): مراوح ووحدات معالجة هواء وأنظمة تهوية أصلية للمصانع والمكاتب والمنازل.",
+            "استشارات وتصميم هندسي لمشاريع التهوية الذكية والتحكم المناخي — من المواصفات إلى دعم التركيب.",
+            "تصدير ولوجستيات ودعم ما بعد البيع عبر شركة رباح للأنظمة التهوية على rabah-co.com.",
+          ],
+        },
+        {
+          company: "رباح — أنظمة هواء صناعية وتجارية",
+          role: "تدفق هواء هندسي للبيئات المتطلبة",
+          duration: "شفط · مجاري · استرداد طاقة",
+          location: "التصنيع، التجزئة، الضيافة",
+          description: [
+            "تهوية وشفط صناعي وتحكم بالدخان للورش والمطابخ ومرافق الإنتاج.",
+            "تكامل تكييف تجاري بمعدات معتمدة من S&P للمكاتب والفنادق ومساحات البيع.",
+            "دعم مشروع كامل في سوريا: اختيار المنتجات والوثائق الفنية والتمثيل المحلي عبر Rabah-Tech.",
           ],
         },
         {
@@ -1016,6 +1140,82 @@ const siteContent = {
       ],
       ctaText:
         "تحتاج حلول BothBS الصحية والإدارية في سوريا؟ تعمل Rabah-Tech كوكيل محلي للاستشارة وتسليم المشاريع والدعم المستمر. زر موقع BothBS أو تواصل معنا مباشرة.",
+    },
+    rabahCo: {
+      detailPath: "/hvac",
+      themeClass: "hvac",
+      pageTitle: "الوكيل الرسمي لـ S&P في سوريا",
+      badge: "وكيل رسمي",
+      companyName: "شركة رباح للأنظمة التهوية (Rabah Co)",
+      website: "https://rabah-co.com/",
+      websiteLabel: "زيارة rabah-co.com",
+      learnMoreLabel: "عرض جميع حلول التكييف",
+      contactLabel: "تواصل معنا في سوريا",
+      paragraphs: [
+        "Rabah-Tech هي الوكيل الرسمي لـ Soler & Palau (S&P) في سوريا عبر شركة رباح للأنظمة التهوية. نربط العملاء الصناعيين والتجاريين والسكنيين بحلول تهوية وتكييف عالمية المستوى — من الاستشارة وتصميم الأنظمة إلى توريد المنتجات المعتمدة ودعم المشاريع.",
+        "S&P رائدة عالمية في تقنية التهوية. عبر شركة رباح، يحصل أصحاب الأعمال والمنازل في سوريا على مراوح S&P الأصلية ومعدات معالجة الهواء وحلول مناخية ذكية مدعومة بخبرة محلية ولوجستيات وخدمة ما بعد البيع.",
+      ],
+      pillars: [
+        {
+          title: "استشارات وتصميم",
+          description:
+            "استشارات هندسية وتصميم أنظمة تهوية مخصصة لمبناك أو خط إنتاجك أو مشروعك السكني.",
+        },
+        {
+          title: "توريد S&P معتمد",
+          description:
+            "منتجات Soler & Palau الأصلية — مراوح وشفاطات ووحدات معالجة هواء وملحقات مع وثائق فنية كاملة.",
+        },
+        {
+          title: "لوجستيات ودعم المشاريع",
+          description:
+            "تنسيق التصدير والتسليم وإرشاد التركيب والدعم المستمر لمشاريع التكييف في سوريا.",
+        },
+      ],
+      productsTitle: "خدمات وحلول التكييف والتهوية",
+      products: [
+        {
+          name: "التهوية والشفط الصناعي",
+          description:
+            "مراوح وشفاطات ثقيلة للمصانع والورش وبيئات الإنتاج.",
+        },
+        {
+          name: "التكييف التجاري",
+          description:
+            "معدات معتمدة من S&P للمكاتب والتجزئة والفنادق والمباني العامة — تحكم مناخي فعّال على نطاق واسع.",
+        },
+        {
+          name: "التهوية السكنية",
+          description:
+            "حلول تهوية وجودة هواء هادئة وموفرة للطاقة للمنازل والشقق.",
+        },
+        {
+          name: "التحكم بالدخان وتهوية السلامة",
+          description:
+            "شفط دخان وتهوية طوارئ هندسية للامتثال وسلامة السكان.",
+        },
+        {
+          name: "معالجة الهواء وأنظمة المجاري",
+          description:
+            "وحدات معالجة هواء كاملة ومراوح مجاري ومكونات توزيع لمشاريع HVAC متكاملة.",
+        },
+        {
+          name: "استشارات فنية",
+          description:
+            "دعم المواصفات وحسابات الأحمال وتحديد حجم الأنظمة من متخصصي تهوية معتمدين.",
+        },
+      ],
+      industriesTitle: "القطاعات التي نخدمها في سوريا",
+      industries: [
+        "التصنيع والصناعة",
+        "المباني التجارية",
+        "الضيافة والمطاعم",
+        "المرافق الصحية",
+        "المشاريع السكنية",
+        "التجزئة ومراكز التسوق",
+      ],
+      ctaText:
+        "تحتاج حلول تهوية أو تكييف S&P في سوريا؟ توفر Rabah-Tech وشركة رباح للأنظمة التهوية تمثيلاً رسمياً ومنتجات معتمدة ودعم مشاريع محلي. زر rabah-co.com أو تواصل معنا مباشرة.",
     },
     contact: {
       pageTitle: "تواصل معنا",

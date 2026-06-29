@@ -11,6 +11,14 @@ const Home = ({ content, isArabic }) => {
       transition={{ duration: 1 }}
     >
       <header className="home-header">
+        <motion.img
+          src={`${process.env.PUBLIC_URL}/rabah-logo.png`}
+          alt="Rabah-Tech"
+          className="home-logo"
+          initial={{ opacity: 0, y: -12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        />
         <motion.h1
           initial={{ scale: 0.8 }}
           animate={{ scale: 1 }}
