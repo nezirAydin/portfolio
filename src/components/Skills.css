@@ -4,6 +4,7 @@
   padding: 2rem 1.25rem;
 }
 
+.skills-page h1,
 .skills-page h2 {
   font-size: clamp(1.75rem, 4vw, 2.5rem);
   margin-bottom: 2rem;
@@ -33,6 +34,7 @@
   border-color: var(--primary-light);
 }
 
+.skills-category h2,
 .skills-category h3 {
   margin-bottom: 1.25rem;
   font-size: 1.1rem;

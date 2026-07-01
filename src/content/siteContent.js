@@ -47,6 +47,8 @@ const siteContent = {
     },
     skills: {
       pageTitle: "Our Services",
+      pageDescription:
+        "Custom software, AI engineering, cloud infrastructure, IoT integration, and enterprise platforms — delivered by Rabah-Tech in Syria.",
       categories: [
         {
           title: "Custom Software Development",
@@ -106,6 +108,8 @@ const siteContent = {
     },
     experience: {
       pageTitle: "Solutions We Deliver",
+      pageDescription:
+        "Explore Rabah-Tech solutions: enterprise software, IUTech IoT, BothBS digital health, S&P HVAC ventilation, and high-performance systems for Syrian businesses.",
       items: [
         {
           company: "IUTech — Energy & Power Monitoring",
@@ -608,6 +612,40 @@ const siteContent = {
       ctaText:
         "Need S&P ventilation or HVAC solutions in Syria? Rabah-Tech and Rabah Ventilation Systems provide official representation, certified products, and local project support. Visit rabah-co.com or contact us directly.",
     },
+    leadCta: {
+      title: "Ready to build your next solution?",
+      description:
+        "Share your project goals with Rabah-Tech. We respond within one business day with a practical plan, timeline, and next steps.",
+      contactLabel: "Contact Rabah-Tech",
+      whatsappLabel: "Chat on WhatsApp",
+      contactPath: "/contact",
+      whatsappMessage: "Hello! I'd like to discuss a project with Rabah-Tech.",
+    },
+    faq: {
+      title: "Frequently Asked Questions",
+      items: [
+        {
+          question: "What services does Rabah-Tech provide?",
+          answer:
+            "Rabah-Tech delivers custom software, AI platforms, mobile and web applications, IoT solutions (official IUTech representative in Syria), S&P HVAC ventilation systems, and digital health solutions through BothBS.",
+        },
+        {
+          question: "Do you work with companies across Syria?",
+          answer:
+            "Yes. Rabah-Tech provides local representation, consultation, integration, and project delivery for businesses and institutions throughout Syria.",
+        },
+        {
+          question: "How do we start a project?",
+          answer:
+            "Contact us via the website form, email, or WhatsApp. We schedule a short discovery call, clarify requirements, and propose a tailored delivery plan.",
+        },
+        {
+          question: "Are you an official partner for IUTech, BothBS, and S&P?",
+          answer:
+            "Yes. Rabah-Tech is the authorized IUTech representative, BothBS agent, and official Soler & Palau (S&P) ventilation agent in Syria through Rabah Ventilation Systems.",
+        },
+      ],
+    },
     contact: {
       pageTitle: "Contact Us",
       subtitle:
@@ -670,6 +708,8 @@ const siteContent = {
     },
     skills: {
       pageTitle: "خدماتنا",
+      pageDescription:
+        "برمجيات مخصصة، هندسة ذكاء اصطناعي، بنية سحابية، تكامل إنترنت الأشياء، ومنصات مؤسسية — تقدمها Rabah-Tech في سوريا.",
       categories: [
         {
           title: "تطوير البرمجيات المخصصة",
@@ -729,6 +769,8 @@ const siteContent = {
     },
     experience: {
       pageTitle: "الحلول التي نقدمها",
+      pageDescription:
+        "استكشف حلول Rabah-Tech: برمجيات مؤسسية، إنترنت الأشياء IUTech، الصحة الرقمية BothBS، تهوية S&P، وأنظمة عالية الأداء للشركات في سوريا.",
       items: [
         {
           company: "IUTech — مراقبة الطاقة والكهرباء",
@@ -1230,6 +1272,40 @@ const siteContent = {
       ],
       ctaText:
         "تحتاج حلول تهوية أو تكييف S&P في سوريا؟ توفر Rabah-Tech وشركة رباح للأنظمة التهوية تمثيلاً رسمياً ومنتجات معتمدة ودعم مشاريع محلي. زر rabah-co.com أو تواصل معنا مباشرة.",
+    },
+    leadCta: {
+      title: "مستعد لبناء حلك التالي؟",
+      description:
+        "شاركنا أهداف مشروعك. نرد خلال يوم عمل واحد بخطة عملية وجدول زمني وخطوات تالية.",
+      contactLabel: "تواصل مع Rabah-Tech",
+      whatsappLabel: "تحدث عبر واتساب",
+      contactPath: "/contact",
+      whatsappMessage: "مرحباً! أود مناقشة مشروع مع Rabah-Tech.",
+    },
+    faq: {
+      title: "الأسئلة الشائعة",
+      items: [
+        {
+          question: "ما الخدمات التي تقدمها Rabah-Tech؟",
+          answer:
+            "تقدم Rabah-Tech برمجيات مخصصة، منصات ذكاء اصطناعي، تطبيقات ويب وجوال، حلول إنترنت الأشياء (ممثل IUTech الرسمي في سوريا)، أنظمة تهوية S&P، وحلول صحية رقمية عبر BothBS.",
+        },
+        {
+          question: "هل تعملون مع شركات في جميع أنحاء سوريا؟",
+          answer:
+            "نعم. توفر Rabah-Tech تمثيلاً محلياً واستشارات وتكاملاً وتسليم مشاريع للشركات والمؤسسات في سوريا.",
+        },
+        {
+          question: "كيف نبدأ مشروعاً؟",
+          answer:
+            "تواصل معنا عبر الموقع أو البريد أو واتساب. نرتب مكالمة استكشافية قصيرة، نوضح المتطلبات، ونقترح خطة تسليم مناسبة.",
+        },
+        {
+          question: "هل أنتم شريك رسمي لـ IUTech وBothBS وS&P؟",
+          answer:
+            "نعم. Rabah-Tech هي الممثل المعتمد لـ IUTech، والوكيل المعتمد لـ BothBS، والوكيل الرسمي لـ Soler & Palau (S&P) في سوريا عبر شركة رباح للأنظمة التهوية.",
+        },
+      ],
     },
     contact: {
       pageTitle: "تواصل معنا",

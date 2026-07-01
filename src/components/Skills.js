@@ -1,29 +1,23 @@
 import React from "react";
-import { motion } from "framer-motion";
 import "./Skills.css";
 
 const Skills = ({ content, isArabic = false }) => {
   return (
-    <motion.div
-      className={`skills-page ${isArabic ? "skills-page-ar" : ""}`}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-    >
-      <h2>{content.pageTitle}</h2>
+    <div className={`skills-page page-enter ${isArabic ? "skills-page-ar" : ""}`}>
+      <h1>{content.pageTitle}</h1>
       <div className="skills-container">
         {content.categories.map((category, index) => (
-          <div className="skills-category" key={index}>
-            <h3>{category.title}</h3>
+          <section className="skills-category" key={category.title} aria-labelledby={`skill-cat-${index}`}>
+            <h2 id={`skill-cat-${index}`}>{category.title}</h2>
             <ul>
-              {category.items.map((skill, idx) => (
-                <li key={idx}>{skill}</li>
+              {category.items.map((skill) => (
+                <li key={skill}>{skill}</li>
               ))}
             </ul>
-          </div>
+          </section>
         ))}
       </div>
-    </motion.div>
+    </div>
   );
 };
 

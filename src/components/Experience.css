@@ -4,6 +4,7 @@
   max-width: 960px;
 }
 
+.experience h1,
 .experience h2 {
   font-size: clamp(1.75rem, 4vw, 2.5rem);
   margin-bottom: 2rem;
@@ -40,6 +41,7 @@
   border-color: var(--primary-light);
 }
 
+.experience-card h2,
 .experience-card h3 {
   font-size: 1.2rem;
   color: var(--text-dark);

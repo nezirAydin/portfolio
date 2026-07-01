@@ -1,30 +1,24 @@
 import React from "react";
 import "./Experience.css";
-import { motion } from "framer-motion";
+import Reveal from "./Reveal";
 
 const Experience = ({ content, isArabic = false }) => {
   return (
-    <div className={`experience ${isArabic ? "experience-ar" : ""}`}>
-      <h2>{content.pageTitle}</h2>
+    <div className={`experience page-enter ${isArabic ? "experience-ar" : ""}`}>
+      <h1>{content.pageTitle}</h1>
       {content.items.map((exp, index) => (
-        <motion.div
-          className="experience-card"
-          key={index}
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: index * 0.2, duration: 0.5 }}
-        >
-          <h3>{exp.company}</h3>
+        <Reveal as="article" className="experience-card" key={exp.company} delay={index * 60}>
+          <h2>{exp.company}</h2>
           <p className="role">{exp.role}</p>
           <p className="duration-location">
             {exp.duration} | {exp.location}
           </p>
           <ul>
-            {exp.description.map((item, idx) => (
-              <li key={idx}>{item}</li>
+            {exp.description.map((item) => (
+              <li key={item}>{item}</li>
             ))}
           </ul>
-        </motion.div>
+        </Reveal>
       ))}
     </div>
   );

@@ -61,3 +61,78 @@ code {
   letter-spacing: -0.02em;
   line-height: 1.25;
 }
+
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.content-below-fold {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 500px;
+}
+
+.page-enter {
+  opacity: 1;
+}
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.section-skeleton {
+  min-height: 280px;
+  margin: 2rem auto;
+  max-width: 1040px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(90deg, var(--bg-light) 25%, var(--border-light) 50%, var(--bg-light) 75%);
+  background-size: 200% 100%;
+  animation: skeletonShimmer 1.2s ease-in-out infinite;
+}
+
+@keyframes skeletonShimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .home-animate-in,
+  .page-enter,
+  .section-skeleton {
+    animation: none;
+  }
+}
+
+:focus-visible {
+  outline: 3px solid var(--primary-light);
+  outline-offset: 2px;
+}
+
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible) {
+  outline: none;
+}

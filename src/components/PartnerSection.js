@@ -1,19 +1,21 @@
 import React from "react";
-import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import Reveal from "./Reveal";
 import "./PartnerSection.css";
 
 const PartnerSection = ({ content, isArabic = false, isHomepage = false }) => {
   const sectionClass = content.themeClass ? `partner-${content.themeClass}` : "";
+  const sectionId = `partner-${content.themeClass || "default"}`;
 
   return (
     <section
-      className={`partner-section ${sectionClass} ${isArabic ? "partner-section-ar" : ""} ${isHomepage ? "partner-section-home" : ""}`}
+      className={`partner-section content-below-fold ${sectionClass} ${isArabic ? "partner-section-ar" : ""} ${isHomepage ? "partner-section-home" : ""}`}
+      aria-labelledby={`${sectionId}-title`}
     >
       <div className="partner-section-inner">
         <div className="partner-section-header">
           <span className="partner-badge">{content.badge}</span>
-          <h2>{content.pageTitle}</h2>
+          <h2 id={`${sectionId}-title`}>{content.pageTitle}</h2>
           <p className="partner-company-name">{content.companyName}</p>
         </div>
 
@@ -25,18 +27,16 @@ const PartnerSection = ({ content, isArabic = false, isHomepage = false }) => {
 
         <div className="partner-pillars">
           {content.pillars.map((pillar, index) => (
-            <motion.div
+            <Reveal
+              as="div"
               className="partner-pillar"
               key={pillar.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1, duration: 0.4 }}
+              delay={index * 80}
             >
               <span className="partner-pillar-number">{String(index + 1).padStart(2, "0")}</span>
               <h3>{pillar.title}</h3>
               <p>{pillar.description}</p>
-            </motion.div>
+            </Reveal>
           ))}
         </div>
 
@@ -44,17 +44,15 @@ const PartnerSection = ({ content, isArabic = false, isHomepage = false }) => {
           <h3>{content.productsTitle}</h3>
           <div className="partner-products-grid">
             {content.products.map((product, index) => (
-              <motion.div
+              <Reveal
+                as="div"
                 className="partner-product-card"
                 key={product.name}
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.05, duration: 0.35 }}
+                delay={index * 40}
               >
                 <h4>{product.name}</h4>
                 <p>{product.description}</p>
-              </motion.div>
+              </Reveal>
             ))}
           </div>
         </div>

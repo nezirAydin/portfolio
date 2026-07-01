@@ -1,27 +1,26 @@
-import React, { useEffect, useState } from "react";
+import React, { Suspense, lazy, useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import { motion } from "framer-motion";
 import "./App.css";
-import Home from "./components/Home";
-import AboutMe from "./components/AboutMe";
-import Experience from "./components/Experience";
-import Projects from "./components/Projects";
-import ContactMe from "./components/ContactMe";
-import Skills from "./components/Skills";
 import WhatsAppButton from "./components/WhatsAppButton";
-import PartnerSection from "./components/PartnerSection";
 import PageViewTracker from "./components/PageViewTracker";
 import SeoHead from "./components/SeoHead";
 import siteContent from "./content/siteContent";
 
+const HomePage = lazy(() => import("./pages/HomePage"));
+const Skills = lazy(() => import("./components/Skills"));
+const Experience = lazy(() => import("./components/Experience"));
+const Projects = lazy(() => import("./components/Projects"));
+const PartnerSection = lazy(() => import("./components/PartnerSection"));
+const ContactMe = lazy(() => import("./components/ContactMe"));
+
+const PageLoader = () => (
+  <div className="page-loader" role="status" aria-live="polite">
+    <span className="page-loader-spinner" aria-hidden="true" />
+  </div>
+);
+
 function App() {
   const [language, setLanguage] = useState("en");
-  const pageTransition = {
-    initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
-    exit: { opacity: 0, y: -20 },
-    transition: { duration: 0.5 },
-  };
   const isArabic = language === "ar";
   const content = siteContent[language];
 
@@ -62,81 +61,47 @@ function App() {
           </button>
         </nav>
         <main id="main-content">
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <motion.div {...pageTransition}>
-                <Home content={content.home} isArabic={isArabic} />
-                <AboutMe content={content.aboutMe} isArabic={isArabic} />
-                <PartnerSection content={content.partner} isArabic={isArabic} isHomepage />
-                <PartnerSection content={content.bothbs} isArabic={isArabic} isHomepage />
-                <PartnerSection content={content.rabahCo} isArabic={isArabic} isHomepage />
-                <Projects content={content.projects} isHomepage isArabic={isArabic} />
-              </motion.div>
-            }
-          />
-          <Route
-            path="/skills"
-            element={
-              <motion.div {...pageTransition}>
-                <Skills content={content.skills} isArabic={isArabic} />
-              </motion.div>
-            }
-          />
-          <Route
-            path="/experience"
-            element={
-              <motion.div {...pageTransition}>
-                <Experience content={content.experience} isArabic={isArabic} />
-              </motion.div>
-            }
-          />
-          <Route
-            path="/projects"
-            element={
-              <motion.div {...pageTransition}>
-                <Projects content={content.projects} isArabic={isArabic} />
-              </motion.div>
-            }
-          />
-          <Route
-            path="/iutech"
-            element={
-              <motion.div {...pageTransition}>
-                <PartnerSection content={content.partner} isArabic={isArabic} />
-              </motion.div>
-            }
-          />
-          <Route
-            path="/bothbs"
-            element={
-              <motion.div {...pageTransition}>
-                <PartnerSection content={content.bothbs} isArabic={isArabic} />
-              </motion.div>
-            }
-          />
-          <Route
-            path="/hvac"
-            element={
-              <motion.div {...pageTransition}>
-                <PartnerSection content={content.rabahCo} isArabic={isArabic} />
-              </motion.div>
-            }
-          />
-          <Route
-            path="/contact"
-            element={
-              <motion.div {...pageTransition}>
-                <ContactMe content={content.contact} isArabic={isArabic} />
-              </motion.div>
-            }
-          />
-        </Routes>
+          <Suspense fallback={<PageLoader />}>
+            <Routes>
+              <Route
+                path="/"
+                element={<HomePage content={content} isArabic={isArabic} />}
+              />
+              <Route
+                path="/skills"
+                element={<Skills content={content.skills} isArabic={isArabic} />}
+              />
+              <Route
+                path="/experience"
+                element={<Experience content={content.experience} isArabic={isArabic} />}
+              />
+              <Route
+                path="/projects"
+                element={<Projects content={content.projects} isArabic={isArabic} />}
+              />
+              <Route
+                path="/iutech"
+                element={<PartnerSection content={content.partner} isArabic={isArabic} />}
+              />
+              <Route
+                path="/bothbs"
+                element={<PartnerSection content={content.bothbs} isArabic={isArabic} />}
+              />
+              <Route
+                path="/hvac"
+                element={<PartnerSection content={content.rabahCo} isArabic={isArabic} />}
+              />
+              <Route
+                path="/contact"
+                element={<ContactMe content={content.contact} isArabic={isArabic} />}
+              />
+            </Routes>
+          </Suspense>
         </main>
         <WhatsAppButton
           message={content.contact.whatsappMessage}
           tooltip={content.contact.whatsappTooltip}
+          ariaLabel={content.contact.whatsappTooltip}
         />
       </div>
     </Router>
