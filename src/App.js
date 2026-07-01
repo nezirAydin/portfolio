@@ -11,6 +11,7 @@ import Skills from "./components/Skills";
 import WhatsAppButton from "./components/WhatsAppButton";
 import PartnerSection from "./components/PartnerSection";
 import PageViewTracker from "./components/PageViewTracker";
+import SeoHead from "./components/SeoHead";
 import siteContent from "./content/siteContent";
 
 function App() {
@@ -27,14 +28,17 @@ function App() {
   useEffect(() => {
     document.documentElement.lang = language;
     document.documentElement.dir = isArabic ? "rtl" : "ltr";
-    document.title = content.meta.title;
-  }, [isArabic, language, content.meta.title]);
+  }, [isArabic, language]);
 
   return (
     <Router>
+      <SeoHead language={language} content={content} />
       <PageViewTracker pageTitle={content.meta.title} />
       <div className={`App app-shell ${isArabic ? "rtl" : "ltr"}`}>
-        <nav className="navigation">
+        <a href="#main-content" className="skip-link">
+          {isArabic ? "انتقل إلى المحتوى" : "Skip to content"}
+        </a>
+        <nav className="navigation" aria-label={isArabic ? "التنقل الرئيسي" : "Main navigation"}>
           <Link to="/" className="nav-brand">
             {content.nav.brand}
           </Link>
@@ -52,10 +56,12 @@ function App() {
             type="button"
             className="language-toggle"
             onClick={() => setLanguage(isArabic ? "en" : "ar")}
+            aria-label={isArabic ? "Switch to English" : "التبديل إلى العربية"}
           >
             {content.nav.toggle}
           </button>
         </nav>
+        <main id="main-content">
         <Routes>
           <Route
             path="/"
@@ -127,6 +133,7 @@ function App() {
             }
           />
         </Routes>
+        </main>
         <WhatsAppButton
           message={content.contact.whatsappMessage}
           tooltip={content.contact.whatsappTooltip}

@@ -35,3 +35,16 @@ export function trackPageView(path, title) {
     page_location: window.location.href,
   });
 }
+
+export function trackWebVital({ name, value, id }) {
+  if (!GA_MEASUREMENT_ID || typeof window.gtag !== "function") {
+    return;
+  }
+
+  window.gtag("event", name, {
+    event_category: "Web Vitals",
+    event_label: id,
+    value: Math.round(name === "CLS" ? value * 1000 : value),
+    non_interaction: true,
+  });
+}

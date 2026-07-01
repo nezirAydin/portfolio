@@ -2,6 +2,10 @@ const siteContent = {
   en: {
     meta: {
       title: "Rabah-Tech | Software Engineering Company",
+      description:
+        "Rabah-Tech delivers custom software, AI platforms, IoT, S&P HVAC, and digital health solutions in Syria. Official agent for IUTech, BothBS, and Soler & Palau.",
+      keywords:
+        "Rabah-Tech, software development Syria, custom software, IoT Syria, HVAC S&P, enterprise ERP, web development, digital health Syria",
     },
     nav: {
       brand: "Rabah-Tech",
@@ -17,9 +21,12 @@ const siteContent = {
     },
     home: {
       title: "Rabah-Tech",
-      subtitle: "Engineering intelligent systems for ambitious businesses",
+      subtitle:
+        "Custom software, IoT, HVAC & digital health — engineered and delivered in Syria",
       description:
-        "We design and deliver high-performance software — from AI-powered platforms and enterprise systems to polished web and mobile products. Rabah-Tech partners with companies that need reliable engineering, fast execution, and solutions built to scale.",
+        "From AI-powered platforms and enterprise ERP to official S&P ventilation and IUTech IoT — Rabah-Tech is your local partner for reliable engineering, fast execution, and production-ready solutions.",
+      ctaPrimary: { label: "Start a project", path: "/contact" },
+      ctaSecondary: { label: "Explore services", path: "/skills" },
       highlights: [
         "Official S&P (Soler & Palau) ventilation agent in Syria via Rabah Ventilation Systems.",
         "Official agent of BothBS healthcare & business solutions in Syria.",
@@ -618,6 +625,10 @@ const siteContent = {
   ar: {
     meta: {
       title: "Rabah-Tech | شركة هندسة برمجيات",
+      description:
+        "Rabah-Tech تقدم برمجيات مخصصة، منصات ذكاء اصطناعي، إنترنت الأشياء، تكييف S&P، وحلول صحية رقمية في سوريا. وكيل رسمي لـ IUTech وBothBS وSoler & Palau.",
+      keywords:
+        "Rabah-Tech، تطوير برمجيات سوريا، برمجيات مخصصة، إنترنت الأشياء، تكييف S&P، ERP، تطوير مواقع، صحة رقمية سوريا",
     },
     nav: {
       brand: "Rabah-Tech",
@@ -633,9 +644,12 @@ const siteContent = {
     },
     home: {
       title: "Rabah-Tech",
-      subtitle: "نبني أنظمة ذكية للشركات الطموحة",
+      subtitle:
+        "برمجيات مخصصة، إنترنت الأشياء، تكييف، وصحة رقمية — هندسة وتسليم في سوريا",
       description:
-        "نصمم ونطور برمجيات عالية الأداء — من منصات الذكاء الاصطناعي والأنظمة المؤسسية إلى منتجات ويب وجوال احترافية. تتعاون Rabah-Tech مع الشركات التي تحتاج هندسة موثوقة وتنفيذاً سريعاً وحلولاً قابلة للتوسع.",
+        "من منصات الذكاء الاصطناعي وأنظمة ERP إلى تهوية S&P الرسمية وإنترنت الأشياء IUTech — Rabah-Tech شريككم المحلي للهندسة الموثوقة والتنفيذ السريع والحلول الجاهزة للإنتاج.",
+      ctaPrimary: { label: "ابدأ مشروعك", path: "/contact" },
+      ctaSecondary: { label: "استكشف خدماتنا", path: "/skills" },
       highlights: [
         "الوكيل الرسمي لـ S&P (Soler & Palau) للتهوية في سوريا عبر شركة رباح للأنظمة التهوية.",
         "الممثل الرسمي لحلول BothBS الصحية والإدارية في سوريا.",

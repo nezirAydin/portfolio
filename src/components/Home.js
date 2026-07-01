@@ -1,6 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import "./Home.css";
+
+const publicUrl = process.env.PUBLIC_URL;
 
 const Home = ({ content, isArabic }) => {
   return (
@@ -11,14 +14,22 @@ const Home = ({ content, isArabic }) => {
       transition={{ duration: 1 }}
     >
       <header className="home-header">
-        <motion.img
-          src={`${process.env.PUBLIC_URL}/rabah-logo.png`}
-          alt="Rabah-Tech"
-          className="home-logo"
+        <motion.picture
           initial={{ opacity: 0, y: -12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-        />
+        >
+          <source srcSet={`${publicUrl}/rabah-logo.webp`} type="image/webp" />
+          <img
+            src={`${publicUrl}/rabah-logo.png`}
+            alt="Rabah-Tech"
+            className="home-logo"
+            width="585"
+            height="132"
+            fetchPriority="high"
+            decoding="async"
+          />
+        </motion.picture>
         <motion.h1
           initial={{ scale: 0.8 }}
           animate={{ scale: 1 }}
@@ -43,6 +54,14 @@ const Home = ({ content, isArabic }) => {
         >
           {content.description}
         </motion.p>
+        <div className="home-cta-row">
+          <Link to={content.ctaPrimary.path} className="home-cta home-cta-primary">
+            {content.ctaPrimary.label}
+          </Link>
+          <Link to={content.ctaSecondary.path} className="home-cta home-cta-secondary">
+            {content.ctaSecondary.label}
+          </Link>
+        </div>
         <div className="home-highlights">
           {content.highlights.map((highlight, index) => (
             <motion.div
